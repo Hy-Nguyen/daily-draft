@@ -8,16 +8,25 @@ import {
 import reportWebVitals from "./reportWebVitals";
 // Route Imports
 import App from "./Pages/App";
-import Test from "./Pages/Test";
+import Drafts from "./Pages/Drafts";
+import Leaderboards from "./Pages/leaderboards";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <App />,
+		element: (
+			<main>
+				<App />
+			</main>
+		),
 	},
 	{
-		path: "/test",
-		element: <Test />,
+		path: "/drafts",
+		element: <Drafts />,
+	},
+	{
+		path: "/leaderboard",
+		element: <Leaderboards />,
 	},
 ]);
 
@@ -26,7 +35,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 	<React.StrictMode>
+		{/*<SolanaWalletProvider>*/}
 		<RouterProvider router={router} />
+		{/*</SolanaWalletProvider>*/}
 	</React.StrictMode>
 );
 
