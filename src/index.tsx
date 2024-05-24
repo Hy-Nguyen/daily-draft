@@ -35,9 +35,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 	<React.StrictMode>
-		{/*<SolanaWalletProvider>*/}
 		<RouterProvider router={router} />
-		{/*</SolanaWalletProvider>*/}
 	</React.StrictMode>
 );
 

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 
+
 export default function NavBar() {
 	return (
 		<nav className=' flex h-[80px]  w-screen justify-center bg-[#121318] text-white'>
@@ -62,7 +63,8 @@ export default function NavBar() {
 					id='connect-wallet'
 					className='flex h-full items-center'
 				>
-					3
+					{/* <WalletMultiButton /> */}
+					btn
 				</div>
 			</div>
 		</nav>
