@@ -1,41 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./Styles/global.css";
-import {
-	createBrowserRouter,
-	RouterProvider,
-} from "react-router-dom";
+
 import reportWebVitals from "./reportWebVitals";
 // Route Imports
 import App from "./Pages/App";
-import Drafts from "./Pages/Drafts";
-import Leaderboards from "./Pages/leaderboards";
-
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: (
-			<main>
-				<App />
-			</main>
-		),
-	},
-	{
-		path: "/drafts",
-		element: <Drafts />,
-	},
-	{
-		path: "/leaderboard",
-		element: <Leaderboards />,
-	},
-]);
 
 const root = ReactDOM.createRoot(
 	document.getElementById("root") as HTMLElement
 );
 root.render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<App />
 	</React.StrictMode>
 );
 

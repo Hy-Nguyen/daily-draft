@@ -1,0 +1,283 @@
+{
+    "status": true,
+    "data": {
+        "game_detail": {
+            "contest_id": "207",
+            "contest_unique_id": "28eLdVQiv",
+            "player_salary_master_id": "27",
+            "contest_name": "tecpinion",
+            "league_id": "12",
+            "league_duration_id": "1",
+            "season_scheduled_date": "2023-03-11 12:00:00",
+            "season_week": "1",
+            "league_drafting_styles_id": "1",
+            "league_salary_cap_id": "5",
+            "size": "2",
+            "entry_fee": "1.00",
+            "prize_pool": "1.80",
+            "league_contest_type_id": "90",
+            "is_cancel": "0",
+            "league_abbr": "EFL",
+            "contest_access_type": "0",
+            "salary_cap": "115",
+            "site_rake": "10",
+            "multiple_lineup": "0",
+            "contest_date": "Mar 11, Sat 12:00 PM",
+            "selected_matches": "881140,881144,881150,881147,881143,881145",
+            "max_player_per_team": "11",
+            "total_user_joined": "1",
+            "user_id": "4560",
+            "contest_type": "1",
+            "is_uncapped": "0",
+            "sports_name": "SOCCER",
+            "minimum_size": "2",
+            "guaranteed_prize": "0",
+            "duration_desc": "Daily",
+            "duration_id": "1",
+            "days": 5,
+            "contest_starts_in": 1678546800000,
+            "today": 1678104000000
+        },
+        "days": 5,
+        "contest_starts_in": 1678546800000,
+        "today": 1678104000000,
+        "team_detail": [
+            {
+                "season_game_unique_id": "881140",
+                "home": "BRI",
+                "away": "BLA",
+                "home_id": "56",
+                "away_id": "1356",
+                "season_scheduled_date": "2023-03-11 12:00:00",
+                "season_scheduled_date_formatted": "Mar 11, Sat 12:00 PM",
+                "home_team_name": "Bristol City",
+                "away_team_name": "Blackpool"
+            },
+            {
+                "season_game_unique_id": "881143",
+                "home": "NOR",
+                "away": "SUN",
+                "home_id": "71",
+                "away_id": "746",
+                "season_scheduled_date": "2023-03-11 12:00:00",
+                "season_scheduled_date_formatted": "Mar 11, Sat 12:00 PM",
+                "home_team_name": "Norwich",
+                "away_team_name": "Sunderland"
+            },
+            {
+                "season_game_unique_id": "881144",
+                "home": "PRE",
+                "away": "CAR",
+                "home_id": "59",
+                "away_id": "43",
+                "season_scheduled_date": "2023-03-11 12:00:00",
+                "season_scheduled_date_formatted": "Mar 11, Sat 12:00 PM",
+                "home_team_name": "Preston",
+                "away_team_name": "Cardiff"
+            },
+            {
+                "season_game_unique_id": "881145",
+                "home": "QPR",
+                "away": "WAT",
+                "home_id": "72",
+                "away_id": "38",
+                "season_scheduled_date": "2023-03-11 12:00:00",
+                "season_scheduled_date_formatted": "Mar 11, Sat 12:00 PM",
+                "home_team_name": "QPR",
+                "away_team_name": "Watford"
+            },
+            {
+                "season_game_unique_id": "881147",
+                "home": "SHE",
+                "away": "LUT",
+                "home_id": "62",
+                "away_id": "1359",
+                "season_scheduled_date": "2023-03-11 12:00:00",
+                "season_scheduled_date_formatted": "Mar 11, Sat 12:00 PM",
+                "home_team_name": "Sheffield Utd",
+                "away_team_name": "Luton"
+            },
+            {
+                "season_game_unique_id": "881150",
+                "home": "WES",
+                "away": "HUD",
+                "home_id": "60",
+                "away_id": "37",
+                "season_scheduled_date": "2023-03-11 12:00:00",
+                "season_scheduled_date_formatted": "Mar 11, Sat 12:00 PM",
+                "home_team_name": "West Brom",
+                "away_team_name": "Huddersfield"
+            }
+        ],
+        "lineup": [
+            {
+                "position_name": "GK",
+                "number_of_players": "1",
+                "position_order": "1",
+                "league_lineup_position_id": "52",
+                "max_player_per_position": "1",
+                "allowed_position": "GK",
+                "index": 0,
+                "player": []
+            },
+            {
+                "position_name": "DF",
+                "number_of_players": "3",
+                "position_order": "2",
+                "league_lineup_position_id": "53",
+                "max_player_per_position": "6",
+                "allowed_position": "DF",
+                "index": 1,
+                "player": []
+            },
+            {
+                "position_name": "DF",
+                "number_of_players": "3",
+                "position_order": "2",
+                "league_lineup_position_id": "53",
+                "max_player_per_position": "6",
+                "allowed_position": "DF",
+                "index": 2,
+                "player": []
+            },
+            {
+                "position_name": "DF",
+                "number_of_players": "3",
+                "position_order": "2",
+                "league_lineup_position_id": "53",
+                "max_player_per_position": "6",
+                "allowed_position": "DF",
+                "index": 3,
+                "player": []
+            },
+            {
+                "position_name": "MF",
+                "number_of_players": "4",
+                "position_order": "3",
+                "league_lineup_position_id": "50",
+                "max_player_per_position": "6",
+                "allowed_position": "MF",
+                "index": 4,
+                "player": []
+            },
+            {
+                "position_name": "MF",
+                "number_of_players": "4",
+                "position_order": "3",
+                "league_lineup_position_id": "50",
+                "max_player_per_position": "6",
+                "allowed_position": "MF",
+                "index": 5,
+                "player": []
+            },
+            {
+                "position_name": "MF",
+                "number_of_players": "4",
+                "position_order": "3",
+                "league_lineup_position_id": "50",
+                "max_player_per_position": "6",
+                "allowed_position": "MF",
+                "index": 6,
+                "player": []
+            },
+            {
+                "position_name": "MF",
+                "number_of_players": "4",
+                "position_order": "3",
+                "league_lineup_position_id": "50",
+                "max_player_per_position": "6",
+                "allowed_position": "MF",
+                "index": 7,
+                "player": []
+            },
+            {
+                "position_name": "FW",
+                "number_of_players": "3",
+                "position_order": "4",
+                "league_lineup_position_id": "51",
+                "max_player_per_position": "6",
+                "allowed_position": "FW",
+                "index": 8,
+                "player": []
+            },
+            {
+                "position_name": "FW",
+                "number_of_players": "3",
+                "position_order": "4",
+                "league_lineup_position_id": "51",
+                "max_player_per_position": "6",
+                "allowed_position": "FW",
+                "index": 9,
+                "player": []
+            },
+            {
+                "position_name": "FW",
+                "number_of_players": "3",
+                "position_order": "4",
+                "league_lineup_position_id": "51",
+                "max_player_per_position": "6",
+                "allowed_position": "FW",
+                "index": 10,
+                "player": []
+            }
+        ],
+        "minposition": {
+            "GK": "1",
+            "DF": "3",
+            "MF": "4",
+            "FW": "3"
+        },
+        "maxposition": {
+            "GK": "1",
+            "DF": "6",
+            "MF": "6",
+            "FW": "6"
+        },
+        "lineupMaxposition": {
+            "GK": 1,
+            "DF": 3,
+            "MF": 4,
+            "FW": 3
+        },
+        "tab_position": [
+            {
+                "position_name": "GK",
+                "number_of_players": "1",
+                "position_order": "1",
+                "league_lineup_position_id": "52",
+                "max_player_per_position": "1",
+                "allowed_position": "GK",
+                "allowed_positions": "GK"
+            },
+            {
+                "position_name": "DF",
+                "number_of_players": "3",
+                "position_order": "2",
+                "league_lineup_position_id": "53",
+                "max_player_per_position": "6",
+                "allowed_position": "DF",
+                "allowed_positions": "DF"
+            },
+            {
+                "position_name": "MF",
+                "number_of_players": "4",
+                "position_order": "3",
+                "league_lineup_position_id": "50",
+                "max_player_per_position": "6",
+                "allowed_position": "MF",
+                "allowed_positions": "MF"
+            },
+            {
+                "position_name": "FW",
+                "number_of_players": "3",
+                "position_order": "4",
+                "league_lineup_position_id": "51",
+                "max_player_per_position": "6",
+                "allowed_position": "FW",
+                "allowed_positions": "FW"
+            }
+        ],
+        "line_up": false,
+        "user_already_joined": false
+    }
+}
