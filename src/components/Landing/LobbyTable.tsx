@@ -10,7 +10,7 @@ export default function LobbyTable() {
 	return (
 		<>
 			<div id='header' className="flex">
-				<div id='left' className=" w-full">
+				<div id='left' className=" w-full justify-evenly">
 					<div className='my-2 flex space-x-2'>
 						<h1>Available Games</h1>
 						<p className='h-[20px] w-[20px] rounded-full bg-[#5A5C71] text-center text-black'>
@@ -63,15 +63,16 @@ export default function LobbyTable() {
 					</div>
 				</div>
 			</div>
-			<div id="table-content">
+			<div id="table-content" className="my-3">
 				<div id="header">
 					<hr />
-					<div className="flex">
-						<h1 className="w-2/5">Tournament</h1>
-						<h1 className="w-1/5">Starts In</h1>
-						<h1 className="w-1/5">Duration</h1>
-						<h1 className="w-1/5">Prize Pool</h1>
+					<div className="flex my-5 text-[16px] text-[#A7ADB9]">
+						<h1 className="w-2/6">Tournament</h1>
+						<h1 className="w-1/6">Starts In</h1>
+						<h1 className="w-1/6">Duration</h1>
+						<h1 className="w-1/6">Prize Pool</h1>
 					</div>
+					<hr />
 				</div>
 			</div>
 		</>
