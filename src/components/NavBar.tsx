@@ -11,7 +11,7 @@ import {
 export default function NavBar() {
 	return (
 		<>
-			<nav className=' flex h-[80px]  w-screen justify-center bg-[#121318] text-white'>
+			<nav className=' flex h-[80px]  w-full justify-center bg-[#121318] text-white'>
 				<div
 					id='container'
 					className={
@@ -75,7 +75,7 @@ export default function NavBar() {
 					</div>
 				</div>
 			</nav>
-			<div className='flex h-[50px] w-screen items-center justify-center bg-[#52BE70]'>
+			<div className='flex h-[50px] w-full items-center justify-center bg-[#52BE70]'>
 				<Carousel>
 					<CarouselContent className='[&>*]:text-center [&>*]:text-[14px] [&>*]:font-semibold [&>*]:text-white'>
 						<CarouselItem>

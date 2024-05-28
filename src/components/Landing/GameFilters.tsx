@@ -14,9 +14,9 @@ export default function GameFilters({
 	return (
 		<motion.button
 			className={`flex h-[30px] w-[94px] items-center justify-center rounded-[6px] border  bg-[#1B1D28] 
-            ${active ? "border-[#52BE70]" : "border-white/5"}`}
+            ${active ? "border-[#52BE70] game-filter-glow" : "border-white/5"}`}
 			onClick={() => setActive(text)}
-			whileHover={{ scale: 1.05 }}
+			whileHover={{ borderColor: "#52BE70"}}
 			animate={{
 				borderColor: active
 					? "#52BE70"

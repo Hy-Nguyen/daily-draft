@@ -9,8 +9,9 @@ export default function Switch() {
 	};
 
 	return (
+		<>
 		<div
-			className='flex items-center border border-white/5'
+			className='flex items-center border border-white/5 w-full'
 			style={{
 				width: "40px",
 				height: "20px",
@@ -32,10 +33,15 @@ export default function Switch() {
 					damping: 30,
 				}}
 				style={{
-					marginLeft: isOn ? "16px" : "0px",
+					marginLeft: isOn ? "18px" : "0px",
 					background: isOn ? "#F4B24E" : "#fff",
 				}}
 			/>
 		</div>
+		<h1 className="whitespace-nowrap" style={{
+			color: isOn ? "#FFC42E" : "#fff",
+			textShadow: isOn ? "0px 0px 6px #F4B24E" : "0px 0px 5px #000",
+		}}>High rollers</h1>	
+		</>
 	);
 }

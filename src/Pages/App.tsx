@@ -35,7 +35,7 @@ function HomePage() {
 	return (
 		<>
 			<NavBar />
-			<main className='bg-lobby flex min-h-screen w-screen justify-center text-white'>
+			<main className='bg-lobby flex min-h-screen max-w-screen justify-center text-white'>
 				<div
 					id='container'
 					className=' mt-[5vh] w-10/12'
