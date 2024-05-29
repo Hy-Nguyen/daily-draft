@@ -2,6 +2,7 @@ import { useState } from "react";
 import GameFilters from "./GameFilters";
 import Switch from "../ui/switch";
 import Search from "../../SVG/Search";
+import LobbyGameDisplay from "./LobbyGameDisplay";
 
 export default function LobbyTable() {
 	const [gameFilter, setGameFilter] =
@@ -63,7 +64,7 @@ export default function LobbyTable() {
 					</div>
 				</div>
 			</div>
-			<div id="table-content" className="my-3">
+			<div id="table-header" className="my-3">
 				<div id="header">
 					<hr />
 					<div className="flex my-5 text-[16px] text-[#A7ADB9]">
@@ -74,6 +75,9 @@ export default function LobbyTable() {
 					</div>
 					<hr />
 				</div>
+			</div>
+			<div id="table-content">
+				<LobbyGameDisplay />
 			</div>
 		</>
 	); 
