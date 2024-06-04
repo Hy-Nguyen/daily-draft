@@ -30,8 +30,8 @@
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Ensures the image does not repeat */
-    height: 100%; /* Ensures the height covers the full viewport */
-    width: 100;
+   
+    width: 100%;
     border-radius: 8px;
   }
 

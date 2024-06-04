@@ -4,9 +4,9 @@ export default function Hero() {
 	return (
 		<div
 			id='hero-section'
-			className='bg-hero flex max-h-[400px] w-full flex-col justify-evenly  rounded-3xl p-8 uppercase'
+			className='bg-hero flex h-[400px] w-full flex-col justify-evenly rounded-3xl p-8 uppercase'
 		>
-			<h1 className=' text-4xl font-semibold'>
+			<h1 className='text-4xl font-semibold'>
 				Player matchups
 			</h1>
 			<h2 className='text-2xl'>
