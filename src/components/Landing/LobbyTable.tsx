@@ -13,7 +13,7 @@ export default function LobbyTable() {
 			<div id='header' className='flex'>
 				<div
 					id='left'
-					className=' w-full justify-evenly'
+					className='w-full justify-evenly'
 				>
 					<div className='my-2 flex space-x-2'>
 						<h1>Available Games</h1>
@@ -47,12 +47,12 @@ export default function LobbyTable() {
 						/>
 						<Switch />
 					</div>
-					<div className='my-3 flex w-full max-w-[340px] items-center justify-center rounded-[6px] border border-white/5 bg-[#1B1C25] '>
+					<div className='my-3 flex w-full max-w-[340px] items-center justify-center rounded-[6px] border border-white/5 bg-[#1B1C25]'>
 						<Search />
 						<input
 							type='text'
 							placeholder='Search for a team, player or bet.'
-							className='h-[40px]  w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F]'
+							className='h-[40px] w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F]'
 						/>
 					</div>
 				</div>
@@ -64,13 +64,13 @@ export default function LobbyTable() {
 						Sort By
 					</h1>
 					<div className='flex w-4/5 items-center rounded-[8px] border border-white/5 bg-[#1A1B23]'>
-						<h1 className='ml-4 whitespace-nowrap text-xs  text-[#5A5C6F]'>
+						<h1 className='ml-4 whitespace-nowrap text-xs text-[#5A5C6F]'>
 							Prize Pool:
 						</h1>
 						<select
 							name='Sort'
 							id='Sort'
-							className=' h-[40px] w-[300px] rounded-[8px] bg-inherit  text-xs'
+							className='h-[40px] w-[300px] rounded-[8px] bg-inherit text-xs'
 						>
 							<option
 								value='h-t-l'
@@ -102,8 +102,7 @@ export default function LobbyTable() {
 			</div>
 			<div
 				id='table-content'
-				className='scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black 
-				mt-6 flex max-h-[400px] flex-col space-y-[20px] overflow-y-scroll pr-4'
+				className='scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black mt-6 flex max-h-[400px] flex-col space-y-[20px] overflow-y-scroll pr-4'
 			>
 				<LobbyGameDisplay
 					matchName='Uefa Euro 2024'
