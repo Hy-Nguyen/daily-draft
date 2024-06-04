@@ -6,11 +6,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Error Page */
-/* iframe{
-    display: none;
-} */
-
 * {
   box-sizing: border-box;
 }
@@ -37,5 +32,4 @@
 
   .game-filter-glow{
     box-shadow: 0px 0px 12px 0px #52BE7054;
-
   }
