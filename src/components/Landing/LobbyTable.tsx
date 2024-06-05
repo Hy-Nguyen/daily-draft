@@ -60,17 +60,17 @@ export default function LobbyTable() {
 					id='right'
 					className='flex w-1/2 flex-col items-end justify-start space-y-3'
 				>
-					<h1 className='w-4/5 text-xs text-[#5A5C6F]/75'>
+					<h1 className='w-3/5 text-xs text-[#5A5C6F]/75'>
 						Sort By
 					</h1>
-					<div className='flex w-4/5 items-center rounded-[8px] border border-white/5 bg-[#1A1B23]'>
+					<div className='flex w-3/5 items-center rounded-[8px] border border-white/5 bg-[#1A1B23]'>
 						<h1 className='ml-4 whitespace-nowrap text-xs text-[#5A5C6F]'>
 							Prize Pool:
 						</h1>
 						<select
 							name='Sort'
 							id='Sort'
-							className='h-[40px] w-[300px] rounded-[8px] bg-inherit text-xs'
+							className='h-[40px] w-full rounded-[8px] bg-inherit text-xs'
 						>
 							<option
 								value='h-t-l'

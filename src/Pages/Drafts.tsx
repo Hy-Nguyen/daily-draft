@@ -1,13 +1,20 @@
+import Filter from "../components/MyDrafts/Filter";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
 
 export default function Drafts() {
-	const [sports, setSports] = useState("");
-	const [leagues, setLeagues] = useState("");
-	const [duration, setDuration] = useState("");
+	const [sports, setSports] =
+		useState("Football");
+	const [leagues, setLeagues] = useState(
+		"UEFA Euro 2024"
+	);
+	const [duration, setDuration] = useState(
+		"All Duration"
+	);
 	const [draftTypes, setDraftTypes] =
-		useState("");
-	const [drafts, setDrafts] = useState("");
+		useState("All Types");
+	const [drafts, setDrafts] =
+		useState("All Drafts");
 
 	return (
 		<>
@@ -17,27 +24,28 @@ export default function Drafts() {
 					id='container'
 					className='mt-[5vh] flex h-full w-10/12 space-x-4'
 				>
-					<div
-						id='filters'
-						className='h-[400px] w-1/4 rounded-[8px] bg-[#1A1B23]'
-					>
-						<div
-							id='filter-header'
-							className='flex h-[50px] w-full items-center justify-start pl-4'
-						>
-							<h1 className='text-2xl'>
-								Filters
-							</h1>
-						</div>
-						<div
-							id='filter-content'
-							className='h-[350px] w-full'
-						></div>
-					</div>
+					<Filter
+						states={[
+							sports,
+							leagues,
+							duration,
+							draftTypes,
+							drafts,
+						]}
+						setStates={[
+							setSports,
+							setLeagues,
+							setDuration,
+							setDraftTypes,
+							setDrafts,
+						]}
+					/>
 					<div
 						id='my-drafts'
-						className='h-full w-3/4 rounded-[8px] bg-black'
-					></div>
+						className='h-[100px] w-3/4 rounded-[8px] bg-black'
+					>
+						
+					</div>
 				</div>
 			</main>
 		</>
