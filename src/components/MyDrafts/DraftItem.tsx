@@ -1,16 +1,15 @@
-import { SOLLogo } from "../Landing/GameDisplay/PrizePool/PrizePoolComps";
 import {
 	GreenBadge,
 	YellowBadge,
 } from "../Landing/GameDisplay/Tournament/Badges";
-import EditDraft from "./EditDraft";
+import SOLIcon from "../ui/SOLIcon";
+import EditDraft from "./EditDrafts/EditDraft";
 import Entries from "./Entries";
-import EntriesSlot from "./EntriesSlot";
 
 export default function DraftItem() {
 	return (
 		<>
-			<div className='mt-2 grid h-[56px] w-full grid-cols-12 items-center border-b text-white'>
+			<div className='mt-2 grid h-[56px] w-full grid-cols-12 items-center border-b border-white/10 text-white'>
 				<div className='col-span-4 grid grid-cols-2'>
 					<div className='flex flex-col'>
 						<h1 className='text-xs text-[#5A5C6F]'>
@@ -24,11 +23,11 @@ export default function DraftItem() {
 					</div>
 				</div>
 				<div className='col-span-1 flex items-center space-x-2'>
-					<SOLLogo />
+					<SOLIcon />
 					<h1>.5</h1>
 				</div>
 				<div className='col-span-1 flex items-center space-x-2'>
-					<SOLLogo />
+					<SOLIcon />
 					<h1>1.5</h1>
 				</div>
 				<div className='col-span-2 flex items-center space-x-2'>
@@ -38,7 +37,6 @@ export default function DraftItem() {
 					<h1>Apr 01, Sat 08:30 AM</h1>
 				</div>
 				<EditDraft />
-
 			</div>
 		</>
 	);

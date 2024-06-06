@@ -16,7 +16,11 @@ export function GreenBadge({
 		</div>
 	);
 }
-export function YellowBadge() {
+export function YellowBadge({
+	text = "Guaranteed",
+}: {
+	text?: string;
+}) {
 	return (
 		<div
 			className='ml-3 flex h-[35px] w-fit items-center justify-center rounded-[6px] bg-[#FFC42E54] px-4'
@@ -25,7 +29,7 @@ export function YellowBadge() {
 			}}
 		>
 			<p className='text-[12px] text-[#FFC42E]'>
-				Guaranteed
+				{text}
 			</p>
 		</div>
 	);

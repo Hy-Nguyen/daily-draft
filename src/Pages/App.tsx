@@ -10,6 +10,7 @@ import Drafts from "./Drafts";
 import Leaderboards from "./leaderboards";
 import Hero from "../components/Landing/Hero";
 import LobbyTable from "../components/Landing/LobbyTable";
+import EditDraftPage from "../components/MyDrafts/EditDrafts/EditDraftPage";
 
 const App = () => {
 	const router = createBrowserRouter([
@@ -18,8 +19,12 @@ const App = () => {
 			element: <HomePage />,
 		},
 		{
-			path: "/drafts",
+			path: "drafts",
 			element: <Drafts />,
+		},
+		{
+			path: "drafts/:id", // Add a parameter to the path
+			element: <EditDraftPage />, // Use the new component to handle the dynamic page
 		},
 		{
 			path: "/leaderboard",

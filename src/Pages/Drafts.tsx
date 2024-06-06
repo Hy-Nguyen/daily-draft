@@ -105,6 +105,8 @@ export default function Drafts() {
 							</div>
 							<div id='my-drafts'>
 								<DraftItem />
+								<DraftItem />
+								<DraftItem />
 							</div>
 						</div>
 					</div>

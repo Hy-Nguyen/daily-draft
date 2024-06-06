@@ -16,6 +16,7 @@ import EntriesBody from "./Entries";
 import PrizesBody from "./Prizes";
 
 export default function Participate() {
+	// modal functions
 	const { isOpen, onOpen, onOpenChange } =
 		useDisclosure();
 	const [tab, setTab] = useState("Overview");
