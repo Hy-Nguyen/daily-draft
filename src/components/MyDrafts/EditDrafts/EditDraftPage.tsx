@@ -1,20 +1,28 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useParams } from "react-router-dom";
-import NavBar from "../../NavBar";
 import EditDraftHero from "./EditDraftHero";
+import { useState } from "react";
 
 export default function EditDraftPage() {
 	const { id } = useParams();
+	const [playerType, setPlayerType] =
+		useState("");
+	const [playerCounts, setPlayerCounts] =
+		useState({
+			GK: 0,
+			DF: 0,
+			MF: 0,
+			FW: 0,
+		});
+
+	// Rest of the code...
 
 	return (
 		<>
-			<NavBar />
-			<h1 className='bg-lobby w-full text-center text-4xl uppercase  text-white'>
-				{id}
-			</h1>
-			<main className='bg-lobby flex min-h-screen w-screen justify-center text-[#5A5C6F]'>
+			<main>
 				<div
 					id='container'
-					className='mt-[5vh] flex h-full w-10/12 space-x-4'
+					className='mt-[5vh] flex h-full w-10/12 flex-col space-x-4'
 				>
 					<EditDraftHero
 						title='UEFA EURO 2024'
@@ -23,6 +31,8 @@ export default function EditDraftPage() {
 						prizePool='1.5'
 						buyIn='.5'
 					/>
+					<hr className='my-10 border-white/10' />
+					<div id='body'>hi</div>
 				</div>
 			</main>
 		</>
