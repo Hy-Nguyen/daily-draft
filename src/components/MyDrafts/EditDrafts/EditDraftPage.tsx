@@ -2,11 +2,19 @@
 import { useParams } from "react-router-dom";
 import EditDraftHero from "./EditDraftHero";
 import { useState } from "react";
+import NavBar from "../../NavBar";
+
+import players from "../../../data/players.json";
+import { motion } from "framer-motion";
+import SearchSection from "./SearchSection";
+import PlayerFilters from "./PlayerFilters";
+import PlayerList from "./PlayerList";
 
 export default function EditDraftPage() {
 	const { id } = useParams();
-	const [playerType, setPlayerType] =
-		useState("");
+	const [playerType, setPlayerType] = useState<
+		string | null
+	>(null);
 	const [playerCounts, setPlayerCounts] =
 		useState({
 			GK: 0,
@@ -14,15 +22,19 @@ export default function EditDraftPage() {
 			MF: 0,
 			FW: 0,
 		});
-
-	// Rest of the code...
+	const [searchInput, setSearchInput] =
+		useState("");
+	const [maxPrice, setMaxPrice] = useState(null);
+	const [availability, setAvailability] =
+		useState(false);
 
 	return (
 		<>
-			<main>
+			<NavBar />
+			<main className='bg-lobby flex min-h-screen w-screen justify-center text-white'>
 				<div
 					id='container'
-					className='mt-[5vh] flex h-full w-10/12 flex-col space-x-4'
+					className='mt-[5vh] flex h-full w-10/12 max-w-[2000px] flex-col items-center justify-center space-x-4'
 				>
 					<EditDraftHero
 						title='UEFA EURO 2024'
@@ -31,8 +43,41 @@ export default function EditDraftPage() {
 						prizePool='1.5'
 						buyIn='.5'
 					/>
-					<hr className='my-10 border-white/10' />
-					<div id='body'>hi</div>
+					<hr className='my-10 w-full border-white/10' />
+					<div
+						id='body'
+						className='flex h-full w-full'
+					>
+						<div
+							id='player-list'
+							className='border-draft bg-draft flex h-[1000px] w-[30%] flex-col rounded-[8px] px-4 py-6'
+						>
+							<SearchSection
+								search={searchInput}
+								setSearch={setSearchInput}
+							/>
+							<PlayerFilters
+								maxPrice={maxPrice}
+								setMaxPrice={setMaxPrice}
+								availability={availability}
+								setAvailability={setAvailability}
+								playerType={playerType}
+								setPlayerType={setPlayerType}
+								playerCounts={playerCounts}
+							/>
+
+							<PlayerList
+								maxPrice={maxPrice}
+								setMaxPrice={setMaxPrice}
+								availability={availability}
+								setAvailability={setAvailability}
+								playerType={playerType}
+								setPlayerType={setPlayerType}
+								playerCounts={playerCounts}
+								setPlayerCounts={setPlayerCounts}
+							/>
+						</div>
+					</div>
 				</div>
 			</main>
 		</>

@@ -36,7 +36,7 @@ export default function Drafts() {
 			<main className='bg-lobby flex min-h-screen w-screen justify-center text-[#5A5C6F]'>
 				<div
 					id='container'
-					className='mt-[5vh] flex h-full w-10/12 space-x-4'
+					className='mt-[5vh] flex h-full w-10/12 max-w-[2000px] space-x-4'
 				>
 					<Filter
 						states={[

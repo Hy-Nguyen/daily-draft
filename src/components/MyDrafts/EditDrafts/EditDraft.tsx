@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link as RouterLink } from "react-router-dom";
-import Crown from "../../../SVG/Crown";
+import Crown from "../../../Icons/Crown";
 
 // Create a motion version of the Link component
 const MotionLink = motion(RouterLink);

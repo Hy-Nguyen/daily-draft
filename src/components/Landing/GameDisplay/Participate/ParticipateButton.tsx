@@ -8,7 +8,7 @@ import {
 } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { useCallback, useState } from "react";
-import Crown from "../../../../SVG/Crown";
+import Crown from "../../../../Icons/Crown";
 import ParticipateTabs from "./ParticipateTabs";
 import OverviewBody from "./Overview";
 import FixturesBody from "./Fixtures";

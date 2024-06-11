@@ -1,4 +1,4 @@
-import Crown from "../../SVG/Crown";
+import Crown from "../../Icons/Crown";
 
 export default function Hero() {
 	return (

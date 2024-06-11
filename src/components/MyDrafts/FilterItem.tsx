@@ -22,7 +22,7 @@ export default function FilterItem({
 				htmlFor={id}
 				className='ml-4 whitespace-nowrap text-xs text-[#5A5C6F]'
 			>
-				{label}:{" "}
+				{label}:
 			</label>
 			<select
 				name={label}

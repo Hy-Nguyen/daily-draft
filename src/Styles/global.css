@@ -33,3 +33,16 @@
   .game-filter-glow{
     box-shadow: 0px 0px 12px 0px #52BE7054;
   }
+
+.border-draft {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.bg-draft { 
+  background: #1A1B23;
+}
+
+.text-draft {
+  color: #5A5C6F;
+}

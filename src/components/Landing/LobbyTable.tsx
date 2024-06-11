@@ -1,7 +1,7 @@
 import { useState } from "react";
 import GameFilters from "./GameFilters";
 import Switch from "../ui/switch";
-import Search from "../../SVG/Search";
+import Search from "../../Icons/Search";
 import LobbyGameDisplay from "./LobbyGameDisplay";
 
 export default function LobbyTable() {
@@ -52,7 +52,7 @@ export default function LobbyTable() {
 						<input
 							type='text'
 							placeholder='Search for a team, player or bet.'
-							className='h-[40px] w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F]'
+							className='h-[40px] w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F] focus:outline-none'
 						/>
 					</div>
 				</div>
@@ -63,7 +63,7 @@ export default function LobbyTable() {
 					<h1 className='w-3/5 text-xs text-[#5A5C6F]/75'>
 						Sort By
 					</h1>
-					<div className='flex w-3/5 items-center rounded-[8px] border border-white/5 bg-[#1A1B23]'>
+					<div className='bg-draft border-draft flex w-3/5 items-center'>
 						<h1 className='ml-4 whitespace-nowrap text-xs text-[#5A5C6F]'>
 							Prize Pool:
 						</h1>
