@@ -27,7 +27,7 @@ export default function PlayerFilterTab({
 	}
 	return (
 		<motion.button
-			className={`flex h-[30px] w-[94px] items-center justify-center rounded-[6px] border bg-[#1B1D28] ${active ? "game-filter-glow border-[#52BE70]" : "border-white/5"}`}
+			className={`flex h-[30px] w-11/12 items-center justify-center rounded-[6px] border bg-[#1B1D28] ${active ? "game-filter-glow border-[#52BE70]" : "border-white/5"}`}
 			onClick={handleChange}
 			whileHover={{ borderColor: "#52BE70" }}
 			animate={{
