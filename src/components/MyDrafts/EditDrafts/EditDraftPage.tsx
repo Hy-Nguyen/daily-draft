@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import SearchSection from "./SearchSection";
 import PlayerFilters from "./PlayerFilters";
 import PlayerList from "./PlayerList";
+import DraftField from "./EditDraftField";
 
 export default function EditDraftPage() {
 	const { id } = useParams();
@@ -46,7 +47,7 @@ export default function EditDraftPage() {
 					<hr className='my-10 w-full border-white/10' />
 					<div
 						id='body'
-						className='flex h-full w-full'
+						className='flex h-full w-full justify-between'
 					>
 						<div
 							id='player-list'
@@ -67,6 +68,18 @@ export default function EditDraftPage() {
 							/>
 
 							<PlayerList
+								maxPrice={maxPrice}
+								setMaxPrice={setMaxPrice}
+								availability={availability}
+								setAvailability={setAvailability}
+								playerType={playerType}
+								setPlayerType={setPlayerType}
+								playerCounts={playerCounts}
+								setPlayerCounts={setPlayerCounts}
+							/>
+						</div>
+						<div className='border-draft bg-draft flex h-[1000px] w-[68%] flex-col rounded-[8px] px-4 py-6'>
+						<DraftField
 								maxPrice={maxPrice}
 								setMaxPrice={setMaxPrice}
 								availability={availability}

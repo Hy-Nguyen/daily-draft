@@ -43,16 +43,23 @@ export default function PlayerList({
 		<div className='mt-4 flex w-full flex-col'>
 			<div
 				id='labels'
-				className='grid grid-cols-6 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]'
+				className='grid grid-cols-7 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]'
 			>
-				<h1 className='col-span-3'>
+				<h1 className='col-span-4'>
 					Player(456)
 				</h1>
 				<h1 className='col-span-1'>Form</h1>
 				<h1 className='col-span-1'>Total</h1>
 				<h1 className='col-span-1'>Price</h1>
 			</div>
-			<div id='player-list' className='w-full'>
+			<div
+				id='player-list'
+				className='mt-4 w-full'
+			>
+				<PlayerDisplay />
+				<PlayerDisplay />
+				<PlayerDisplay />
+				<PlayerDisplay />
 				<PlayerDisplay />
 			</div>
 		</div>
