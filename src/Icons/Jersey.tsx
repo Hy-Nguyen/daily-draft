@@ -1,8 +1,12 @@
-export default function Jersey() {
+export default function Jersey({
+	width,
+}: {
+	width?: string;
+}) {
 	return (
 		<svg
-			width='45'
-			height='45'
+			width={width || "45"}
+			height={width || "45"}
 			viewBox='0 0 34 35'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
