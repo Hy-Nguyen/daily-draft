@@ -14,6 +14,9 @@ import Hero from "../components/Landing/Hero";
 import LobbyTable from "../components/Landing/LobbyTable";
 import EditDraftPage from "../components/MyDrafts/EditDrafts/EditDraftPage";
 
+import { Buffer } from "buffer";
+window.Buffer = Buffer;
+
 const App = () => {
 	const router = createBrowserRouter([
 		{

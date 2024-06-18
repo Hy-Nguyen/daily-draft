@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import { WalletMultiButton } from "./wallet";
 import {
 	Carousel,
 	CarouselContent,
