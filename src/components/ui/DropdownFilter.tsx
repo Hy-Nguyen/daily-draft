@@ -17,6 +17,7 @@ interface DropdownFilterProps {
 	options: any[];
 	label?: string;
 	height?: string;
+	className?: string;
 }
 
 export default function DropdownFilter({
@@ -25,6 +26,7 @@ export default function DropdownFilter({
 	options,
 	label,
 	height,
+	className
 }: DropdownFilterProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef =
@@ -58,7 +60,7 @@ export default function DropdownFilter({
 	return (
 		<div
 			ref={dropdownRef}
-			className={`bg-draft border-draft relative flex h-[${height || 50}px] w-full items-center justify-start`}
+			className={`${className} bg-draft border-draft relative flex h-[${height || 50}px] w-full items-center justify-start`}
 		>
 			<div
 				className='flex w-full items-center justify-between p-4'

@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "name": "Cristiano Ronaldo",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 2,
+        "name": "Lionel Messi",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 3,
+        "name": "Robert Lewandowski",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 4,
+        "name": "Kevin De Bruyne",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 5,
+        "name": "Neymar Jr.",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 6,
+        "name": "Mohamed Salah",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 7,
+        "name": "Kylian Mbappe",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 8,
+        "name": "Virgil van Dijk",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 9,
+        "name": "Sergio Ramos",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 10,
+        "name": "Luka Modric",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 11,
+        "name": "Paul Pogba",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 12,
+        "name": "Eden Hazard",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 13,
+        "name": "Sadio Mane",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 14,
+        "name": "Toni Kroos",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 15,
+        "name": "Harry Kane",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 16,
+        "name": "N'Golo Kante",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 17,
+        "name": "Jan Oblak",
+        "position": "GK",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 18,
+        "name": "Joshua Kimmich",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 19,
+        "name": "Romelu Lukaku",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 20,
+        "name": "Bruno Fernandes",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 21,
+        "name": "Raheem Sterling",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 22,
+        "name": "Gareth Bale",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 23,
+        "name": "Antoine Griezmann",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 24,
+        "name": "Paulo Dybala",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 25,
+        "name": "Thiago Alcantara",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 26,
+        "name": "Sergio Aguero",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 27,
+        "name": "David Silva",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 28,
+        "name": "Thomas Muller",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 29,
+        "name": "Marco Reus",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 30,
+        "name": "Trent Alexander-Arnold",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 31,
+        "name": "Jadon Sancho",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 32,
+        "name": "Hakim Ziyech",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 33,
+        "name": "Gianluigi Donnarumma",
+        "position": "GK",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 34,
+        "name": "Kalidou Koulibaly",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 35,
+        "name": "Christian Pulisic",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 36,
+        "name": "Son Heung-min",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 37,
+        "name": "Marcelo",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 38,
+        "name": "Nicolás Tagliafico",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 39,
+        "name": "Frenkie de Jong",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 40,
+        "name": "Edinson Cavani",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 41,
+        "name": "Giovani Lo Celso",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 42,
+        "name": "Luis Suarez",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 43,
+        "name": "Aymeric Laporte",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 44,
+        "name": "Keylor Navas",
+        "position": "GK",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 45,
+        "name": "Sergio Busquets",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 46,
+        "name": "Angel Di Maria",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 47,
+        "name": "Jamie Vardy",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 48,
+        "name": "Pierre-Emerick Aubameyang",
+        "position": "FW",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 49,
+        "name": "Raphael Varane",
+        "position": "DF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    },
+    {
+        "id": 50,
+        "name": "Bernardo Silva",
+        "position": "MF",
+        "form": 8.5,
+        "total": 8.5,
+        "price": 10.5
+    }
+]

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import SearchSection from "./SearchSection";
 import PlayerFilters from "./PlayerFilters";
 import PlayerList from "./PlayerList";
-import DraftField from "./EditDraftField";
+import DraftField from "./Field/EditDraftField";
 
 export default function EditDraftPage() {
 	const { id } = useParams();
@@ -32,7 +32,7 @@ export default function EditDraftPage() {
 	return (
 		<>
 			<NavBar />
-			<main className='bg-lobby flex min-h-screen w-screen justify-center text-white'>
+			<main className='bg-lobby flex min-h-screen w-screen justify-center pb-10 text-white'>
 				<div
 					id='container'
 					className='mt-[5vh] flex h-full w-10/12 max-w-[2000px] flex-col items-center justify-center space-x-4'
@@ -47,11 +47,11 @@ export default function EditDraftPage() {
 					<hr className='my-10 w-full border-white/10' />
 					<div
 						id='body'
-						className='flex h-full w-full justify-between'
+						className='flex h-[1200px] w-full justify-between'
 					>
 						<div
 							id='player-list'
-							className='border-draft bg-draft flex h-[1000px] w-[30%] flex-col rounded-[8px] px-4 py-6'
+							className='border-draft bg-draft flex w-[30%] flex-col rounded-[8px] px-4 py-6'
 						>
 							<SearchSection
 								search={searchInput}
@@ -78,8 +78,8 @@ export default function EditDraftPage() {
 								setPlayerCounts={setPlayerCounts}
 							/>
 						</div>
-						<div className='border-draft bg-draft flex h-[1000px] w-[68%] flex-col rounded-[8px] px-4 py-6'>
-						<DraftField
+						<div className='border-draft bg-draft flex w-[68%] flex-col rounded-[8px] px-4 py-6'>
+							<DraftField
 								maxPrice={maxPrice}
 								setMaxPrice={setMaxPrice}
 								availability={availability}

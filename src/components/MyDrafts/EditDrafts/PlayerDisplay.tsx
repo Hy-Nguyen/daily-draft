@@ -1,12 +1,32 @@
 import Jersey from "../../../Icons/Jersey";
+import Plus from "../../../Icons/Plus";
 
-export default function PlayerDisplay() {
+// {
+// 	id: 1,
+// 	name: "Cristiano Ronaldo",
+// 	position: "FW",
+// 	form: 8.5,
+// 	total: 8.5,
+// 	price: 10.5,
+// },
+export interface Player {
+	id: number;
+	name: string;
+	position: string;
+	form: number;
+	total: number;
+	price: number;
+}
+
+export default function PlayerDisplay(
+	player: Player
+) {
 	return (
 		<>
-			<div className='grid grid-cols-7 '>
-				<div className='col-span-4 flex justify-start space-x-3'>
-					<div className='border-draft flex aspect-square w-[50px] items-center justify-center'>
-						+
+			<div className='grid grid-cols-7'>
+				<div className='col-span-4 flex items-center justify-start space-x-3'>
+					<div className='border-draft flex h-[50px] min-w-[50px] items-center justify-center'>
+						<Plus />
 					</div>
 					<div className='relative flex aspect-square w-[50px] items-center justify-center'>
 						<Jersey />
@@ -16,7 +36,7 @@ export default function PlayerDisplay() {
 					</div>
 					<div className='flex flex-col'>
 						<h1 className='font-bold'>
-							O. Watkins
+							{player.name}
 						</h1>
 						<div className='flex items-center space-x-1 text-sm'>
 							<div className='w-fit rounded-[4px] border border-[#52BE70] px-2 text-[#52BE70]'>
@@ -32,13 +52,13 @@ export default function PlayerDisplay() {
 					</div>
 				</div>
 				<h1 className='col-span-1 flex items-center'>
-					5.84
+					{player.form}
 				</h1>
 				<h1 className='col-span-1 flex items-center'>
-					197.9
+					{player.total}
 				</h1>
 				<h1 className='col-span-1 flex items-center text-[#52BE70]'>
-					12.5M
+					{player.price}M
 				</h1>
 			</div>
 			<hr className='my-4 border-white/30' />

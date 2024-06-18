@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 
 export default function DropdownArrow({
 	isOpen,
+	className,
 }: {
 	isOpen: boolean;
+	className?: string;
 }) {
 	return (
 		<motion.svg
@@ -14,6 +16,7 @@ export default function DropdownArrow({
 			xmlns='http://www.w3.org/2000/svg'
 			animate={{ rotate: isOpen ? 180 : 0 }} // Rotate based on isOpen state
 			transition={{ duration: 0.3 }}
+			className={className}
 		>
 			<path
 				d='M5.308 6.016L0 0.707999L0.708 0L5.308 4.6L9.908 0L10.616 0.707999L5.308 6.016Z'

@@ -3,16 +3,20 @@ import Jersey from "../../../Icons/Jersey";
 
 export default function AddPlayer() {
 	return (
-		<div className='relative'>
-			<Jersey width='60' />
-			<motion.div
-				className='absolute -bottom-3 left-0 flex w-full items-center justify-center bg-gradient-to-b from-black to-slate-900'
-				whileHover={{
-					border: "1px solid #52BE70",
+		<div className='flex flex-col'>
+			<Jersey width='70' />
+			<motion.button
+				className='-mt-[15px] flex w-full items-center justify-center bg-gradient-to-b from-black to-slate-900'
+				initial={{
+					border: "1px solid #000",
 				}}
+				whileHover={{
+					border: "1px solid #fff",
+				}}
+				onClick={() => alert("Add Player")}
 			>
 				<h1 className=''>+</h1>
-			</motion.div>
+			</motion.button>
 		</div>
 	);
 }

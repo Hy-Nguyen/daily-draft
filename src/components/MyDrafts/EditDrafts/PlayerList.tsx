@@ -1,4 +1,7 @@
 import PlayerDisplay from "./PlayerDisplay";
+import { useState } from "react";
+import players from "../../../data/fieldPlayers.json";
+import Pagination from "./Field/Pagination";
 
 interface PlayerListProps {
 	maxPrice: number | null;
@@ -39,14 +42,30 @@ export default function PlayerList({
 	playerCounts,
 	setPlayerCounts,
 }: PlayerListProps) {
+	const [currentPage, setCurrentPage] =
+		useState(1);
+	const playersPerPage = 10;
+	const indexOfLastPlayer =
+		currentPage * playersPerPage;
+	const indexOfFirstPlayer =
+		indexOfLastPlayer - playersPerPage;
+	const currentPlayers = players.slice(
+		indexOfFirstPlayer,
+		indexOfLastPlayer
+	);
+
+	const totalPages = Math.ceil(
+		players.length / playersPerPage
+	);
+
 	return (
-		<div className='mt-4 flex w-full flex-col'>
+		<div className='relative mt-4 flex h-full w-full flex-col'>
 			<div
 				id='labels'
 				className='grid grid-cols-7 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]'
 			>
 				<h1 className='col-span-4'>
-					Player(456)
+					Player({players.length})
 				</h1>
 				<h1 className='col-span-1'>Form</h1>
 				<h1 className='col-span-1'>Total</h1>
@@ -56,12 +75,18 @@ export default function PlayerList({
 				id='player-list'
 				className='mt-4 w-full'
 			>
-				<PlayerDisplay />
-				<PlayerDisplay />
-				<PlayerDisplay />
-				<PlayerDisplay />
-				<PlayerDisplay />
+				{currentPlayers.map((player) => (
+					<PlayerDisplay
+						key={player.id}
+						{...player}
+					/>
+				))}
 			</div>
+			<Pagination
+				currentPage={currentPage}
+				totalPages={totalPages}
+				onPageChange={setCurrentPage}
+			/>
 		</div>
 	);
 }
