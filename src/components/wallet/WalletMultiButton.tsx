@@ -99,16 +99,16 @@ export const WalletMultiButton: FC<
 	if (!wallet)
 		return (
 			<WalletModalButton {...props}>
-				<h1 className='text-sm font-bold md:text-lg'>
-					Connect to Flip!
+				<h1 className='text-sm font-semibold md:text-lg'>
+					Connect Wallet
 				</h1>
 			</WalletModalButton>
 		);
 	if (!base58)
 		return (
 			<WalletConnectButton {...props}>
-				<h1 className='text-sm font-bold md:text-lg'>
-					Connect to Flip!
+				<h1 className='text-sm font-semibold md:text-lg'>
+					Connect Wallet
 				</h1>
 			</WalletConnectButton>
 		);
@@ -117,7 +117,7 @@ export const WalletMultiButton: FC<
 		<div className='wallet-adapter-dropdown items-center'>
 			<Button
 				aria-expanded={active}
-				className='wallet-adapter-button-trigger w-full'
+				className='wallet-adapter-button-trigger w-[180px]'
 				onClick={openDropdown}
 				{...props}
 			>

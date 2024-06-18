@@ -25,15 +25,15 @@ export const Button: FC<ButtonProps> = (
 ) => {
 	return (
 		<motion.button
-			className={`flex w-full items-center justify-center rounded-[4px] px-4 py-2 text-white xl:text-[20px]`}
+			className={`flex w-[180px] items-center justify-center rounded-[5px] px-4 py-2 text-white xl:text-[20px]`}
 			disabled={props?.disabled}
 			style={{
 				...props?.style,
 				zIndex: 100,
-				background: "#7D92FF",
+				background: "#52BE70",
 			}}
 			whileHover={{
-				background: "#4C69FF",
+				background: "#34A152",
 				scale: 1.1,
 			}}
 			onClick={props?.onClick}

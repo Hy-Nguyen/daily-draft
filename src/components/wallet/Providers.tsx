@@ -18,15 +18,12 @@ import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 // Default styles that can be overridden by your app
 import "./wallet.css";
 
-
 const SolanaWalletProvider = ({
 	children,
 }: {
 	children: React.ReactNode;
 }) => {
-
-  const network = WalletAdapterNetwork.Devnet;
-
+	const network = WalletAdapterNetwork.Devnet;
 
 	const endpoint = useMemo(
 		() => clusterApiUrl(network),
@@ -48,7 +45,10 @@ const SolanaWalletProvider = ({
 			endpoint={endpoint}
 			config={{ commitment: "confirmed" }}
 		>
-			<WalletProvider wallets={wallets}>
+			<WalletProvider
+				wallets={wallets}
+				autoConnect
+			>
 				<WalletModalProvider>
 					{children}
 				</WalletModalProvider>
