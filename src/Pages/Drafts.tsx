@@ -4,7 +4,7 @@ import {
 } from "framer-motion";
 import GameFilters from "../components/Landing/GameFilters";
 import DraftItem from "../components/MyDrafts/DraftItem";
-import Filter from "../components/MyDrafts/Filter";
+import DraftFilter from "../components/MyDrafts/Filter";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
 
@@ -48,7 +48,7 @@ export default function Drafts() {
 					id='container'
 					className='mt-[5vh] flex h-full w-10/12 max-w-[2000px] space-x-4'
 				>
-					<Filter
+					<DraftFilter
 						states={[
 							sports,
 							leagues,

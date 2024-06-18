@@ -1,5 +1,5 @@
 import React from "react";
-import WalletProvider from "../components/Wallet/Provider";
+import SolanaWalletProvider from "../components/wallet/Providers";
 
 function Layout({
 	children,
@@ -7,7 +7,9 @@ function Layout({
 	children: React.ReactNode;
 }) {
 	return (
-		<WalletProvider>{children}</WalletProvider>
+		<SolanaWalletProvider>
+			{children}
+		</SolanaWalletProvider>
 	);
 }
 

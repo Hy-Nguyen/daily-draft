@@ -6,8 +6,10 @@ import {
 	RouterProvider,
 } from "react-router-dom";
 import { NextUIProvider } from "@nextui-org/react";
+import SolanaWalletProvider from "../components/wallet/Providers";
+
 import Drafts from "./Drafts";
-import Leaderboards from "./leaderboards";
+import Leaderboards from "./Leaderboards";
 import Hero from "../components/Landing/Hero";
 import LobbyTable from "../components/Landing/LobbyTable";
 import EditDraftPage from "../components/MyDrafts/EditDrafts/EditDraftPage";
@@ -32,9 +34,11 @@ const App = () => {
 		},
 	]);
 	return (
-		<NextUIProvider>
-			<RouterProvider router={router} />
-		</NextUIProvider>
+		<SolanaWalletProvider>
+			<NextUIProvider>
+				<RouterProvider router={router} />
+			</NextUIProvider>
+		</SolanaWalletProvider>
 	);
 };
 

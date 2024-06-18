@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import LeftArrow from "../../../../Icons/LeftArrow";
 import RightArrow from "../../../../Icons/RightArrow";
+import DoubleLeftArrow from "../../../../Icons/DoubleLeftArrow";
+import DoubleRightArrow from "../../../../Icons/DoubleRightArrow";
 
 interface PaginationProps {
 	currentPage: number;
@@ -51,6 +53,20 @@ export default function Pagination({
 	return (
 		<div className='absolute bottom-0 flex w-full items-center justify-center space-x-3'>
 			<motion.button
+				onClick={() => handlePageChange(1)}
+				disabled={currentPage === 1}
+				className='border-draft flex aspect-square w-[40px] items-center justify-center bg-[#121318]'
+				whileHover={
+					currentPage === 1
+						? {}
+						: {
+								boxShadow: "0px 0px 4px #ffffff",
+							}
+				}
+			>
+				<DoubleLeftArrow />
+			</motion.button>
+			<motion.button
 				onClick={() =>
 					handlePageChange(currentPage - 1)
 				}
@@ -100,6 +116,22 @@ export default function Pagination({
 				}
 			>
 				<RightArrow />
+			</motion.button>
+			<motion.button
+				onClick={() =>
+					handlePageChange(totalPages)
+				}
+				disabled={currentPage === totalPages}
+				className='border-draft flex aspect-square w-[40px] items-center justify-center bg-[#121318]'
+				whileHover={
+					currentPage === totalPages
+						? {}
+						: {
+								boxShadow: "0px 0px 4px #ffffff",
+							}
+				}
+			>
+				<DoubleRightArrow />
 			</motion.button>
 		</div>
 	);

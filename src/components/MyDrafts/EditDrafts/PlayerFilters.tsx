@@ -66,6 +66,7 @@ export default function PlayerFilters({
 						]}
 						selected={maxPrice}
 						setSelected={setMaxPrice}
+						className='z-10'
 					/>
 				</div>
 				<div className='w-1/2'>
@@ -77,6 +78,7 @@ export default function PlayerFilters({
 						]}
 						selected={availability}
 						setSelected={setAvailability}
+						className='z-10'
 					/>
 				</div>
 			</div>

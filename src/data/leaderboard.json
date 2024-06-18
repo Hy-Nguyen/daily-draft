@@ -1,0 +1,352 @@
+[
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "John Doe",
+        "played": 55,
+        "rank": 1,
+        "won": 53
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Jane Smith",
+        "played": 50,
+        "rank": 2,
+        "won": 45
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Bob Johnson",
+        "played": 45,
+        "rank": 3,
+        "won": 38
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Alice Brown",
+        "played": 40,
+        "rank": 4,
+        "won": 32
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Mike Davis",
+        "played": 35,
+        "rank": 5,
+        "won": 28
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Emily Chen",
+        "played": 30,
+        "rank": 6,
+        "won": 22
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "David Lee",
+        "played": 25,
+        "rank": 7,
+        "won": 18
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Sarah Taylor",
+        "played": 20,
+        "rank": 8,
+        "won": 14
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Kevin White",
+        "played": 15,
+        "rank": 9,
+        "won": 10
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Laura Martin",
+        "played": 10,
+        "rank": 10,
+        "won": 6
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "James Harris",
+        "played": 5,
+        "rank": 11,
+        "won": 2
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Olivia Patel",
+        "played": 0,
+        "rank": 12,
+        "won": 0
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Michael Brown",
+        "played": 5,
+        "rank": 13,
+        "won": 1
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Jessica Lee",
+        "played": 10,
+        "rank": 14,
+        "won": 2
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "William Davis",
+        "played": 15,
+        "rank": 15,
+        "won": 3
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Hannah Kim",
+        "played": 20,
+        "rank": 16,
+        "won": 4
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Ethan Hall",
+        "played": 25,
+        "rank": 17,
+        "won": 5
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Mia Rodriguez",
+        "played": 30,
+        "rank": 18,
+        "won": 6
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Liam Brown",
+        "played": 35,
+        "rank": 19,
+        "won": 7
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Ava Martin",
+        "played": 40,
+        "rank": 20,
+        "won": 8
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Julian Lee",
+        "played": 45,
+        "rank": 21,
+        "won": 9
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Sophia Patel",
+        "played": 50,
+        "rank": 22,
+        "won": 10
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Alexander Brown",
+        "played": 55,
+        "rank": 23,
+        "won": 11
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Gabriella Kim",
+        "played": 60,
+        "rank": 24,
+        "won": 12
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Benjamin Hall",
+        "played": 65,
+        "rank": 25,
+        "won": 13
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Isabella Rodriguez",
+        "played": 70,
+        "rank": 26,
+        "won": 14
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Logan Brown",
+        "played": 75,
+        "rank": 27,
+        "won": 15
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Charlotte Martin",
+        "played": 80,
+        "rank": 28,
+        "won": 16
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Elijah Lee",
+        "played": 85,
+        "rank": 29,
+        "won": 17
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Ava Taylor",
+        "played": 90,
+        "rank": 30,
+        "won": 18
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Julian Harris",
+        "played": 95,
+        "rank": 31,
+        "won": 19
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Emily Chen",
+        "played": 100,
+        "rank": 32,
+        "won": 20
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Michael Davis",
+        "played": 105,
+        "rank": 33,
+        "won": 21
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Sarah Taylor",
+        "played": 110,
+        "rank": 34,
+        "won": 22
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Kevin White",
+        "played": 115,
+        "rank": 35,
+        "won": 23
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Laura Martin",
+        "played": 120,
+        "rank": 36,
+        "won": 24
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "James Harris",
+        "played": 125,
+        "rank": 37,
+        "won": 25
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Olivia Patel",
+        "played": 130,
+        "rank": 38,
+        "won": 26
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Michael Brown",
+        "played": 135,
+        "rank": 39,
+        "won": 27
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Jessica Lee",
+        "played": 140,
+        "rank": 40,
+        "won": 28
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "William Davis",
+        "played": 145,
+        "rank": 41,
+        "won": 29
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Hannah Kim",
+        "played": 150,
+        "rank": 42,
+        "won": 30
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Ethan Hall",
+        "played": 155,
+        "rank": 43,
+        "won": 31
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Mia Rodriguez",
+        "played": 160,
+        "rank": 44,
+        "won": 32
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Liam Brown",
+        "played": 165,
+        "rank": 45,
+        "won": 33
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Sophia Johnson",
+        "played": 170,
+        "rank": 46,
+        "won": 34
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Elijah Smith",
+        "played": 175,
+        "rank": 47,
+        "won": 35
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Ava Davis",
+        "played": 180,
+        "rank": 48,
+        "won": 36
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Julian Taylor",
+        "played": 185,
+        "rank": 49,
+        "won": 37
+    },
+    {
+        "avatar": "/avatars/ghosty.png",
+        "name": "Emily Brown",
+        "played": 190,
+        "rank": 50,
+        "won": 38
+    }
+]

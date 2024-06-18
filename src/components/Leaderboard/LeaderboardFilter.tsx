@@ -1,14 +1,30 @@
-import FilterItem from "./FilterItem";
+import FilterItem from "./FilterItemLeaderboard";
 import { motion } from "framer-motion";
 import Refresh from "../../Icons/Refresh";
 
-export default function DraftFilter({
+export default function LeaderboardFilter({
 	states,
 	setStates,
 }: {
 	states: any[];
 	setStates: any[];
 }) {
+	// Initial states
+	const initialStates = [
+		"UEFA Euro 2024",
+		"All Duration",
+		"All Types",
+		"Geography",
+	];
+
+	// Reset function
+	function resetFilters() {
+		setStates[0](initialStates[0]);
+		setStates[1](initialStates[1]);
+		setStates[2](initialStates[2]);
+		setStates[3](initialStates[3]);
+	}
+
 	return (
 		<>
 			<form
@@ -23,7 +39,7 @@ export default function DraftFilter({
 					<h1 className='text-2xl'>Filters</h1>
 					<motion.button
 						id='reset-filters'
-						type='reset'
+						onClick={resetFilters}
 						className='flex aspect-square w-[40px] items-center justify-center rounded-[6px] border border-white/10 bg-[#1B1D28]'
 						whileHover={{
 							scale: 1.05,
@@ -47,64 +63,52 @@ export default function DraftFilter({
 					className='h-full w-full'
 				>
 					<FilterItem
-						id='Sports'
-						label='Sports'
-						options={[
-							"Football",
-							"Basketball",
-							"Baseball",
-							"Hockey",
-						]}
-						selected={states[0]}
-						setSelected={setStates[0]}
-					/>
-					<FilterItem
-						id='Leagues'
 						label='Leagues'
 						options={[
 							"UEFA Euro 2024",
 							"UEFA Champions League",
 							"Premier League",
 						]}
-						selected={states[1]}
-						setSelected={setStates[1]}
+						selected={states[0]}
+						setSelected={setStates[0]}
+						className='mb-[12px]'
 					/>
 					<FilterItem
-						id='Duration'
 						label='Duration'
 						options={[
 							"All Duration",
 							"50M",
 							"2H",
 						]}
-						selected={states[2]}
-						setSelected={setStates[2]}
+						selected={states[1]}
+						setSelected={setStates[1]}
+						className='mb-[12px]'
 					/>
 					<FilterItem
-						id='Draft Types'
 						label='Draft Types'
 						options={[
 							"All Types",
 							"Type 1",
 							"Type 2",
 						]}
-						selected={states[3]}
-						setSelected={setStates[3]}
+						selected={states[2]}
+						setSelected={setStates[2]}
+						className='mb-[12px]'
 					/>
 					<FilterItem
-						id='Draft'
-						label='Draft'
+						label='Geography'
 						options={[
-							"All Drafts",
-							"Drafts",
-							"Drafts",
+							"Geography",
+							"Geography",
+							"Geography",
 						]}
-						selected={states[4]}
-						setSelected={setStates[4]}
+						selected={states[3]}
+						setSelected={setStates[3]}
+						className='mb-[12px]'
 					/>
 					<motion.button
 						type='submit'
-						className='my-2 h-[60px] w-full rounded-[6px] bg-[#52BE70] text-2xl font-semibold text-white'
+						className='mb-2 mt-4 h-[50px] w-full rounded-[6px] bg-[#52BE70] text-2xl font-semibold text-white'
 						whileHover={{
 							scale: 1.05,
 							boxShadow:
