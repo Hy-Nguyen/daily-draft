@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { createContext, useContext } from 'react';
 
 export interface WalletModalContextState {
@@ -10,19 +10,16 @@ const DEFAULT_CONTEXT = {
   setVisible(_open: boolean) {
     console.error(constructMissingProviderErrorMessage('call', 'setVisible'));
   },
-  visible: false
+  visible: false,
 };
 Object.defineProperty(DEFAULT_CONTEXT, 'visible', {
   get() {
     console.error(constructMissingProviderErrorMessage('read', 'visible'));
     return false;
-  }
+  },
 });
 
-function constructMissingProviderErrorMessage(
-  action: string,
-  valueName: string
-) {
+function constructMissingProviderErrorMessage(action: string, valueName: string) {
   return (
     'You have tried to ' +
     ` ${action} "${valueName}"` +
@@ -33,9 +30,7 @@ function constructMissingProviderErrorMessage(
   );
 }
 
-export const WalletModalContext = createContext<WalletModalContextState>(
-  DEFAULT_CONTEXT as WalletModalContextState
-);
+export const WalletModalContext = createContext<WalletModalContextState>(DEFAULT_CONTEXT as WalletModalContextState);
 
 export function useWalletModal(): WalletModalContextState {
   return useContext(WalletModalContext);

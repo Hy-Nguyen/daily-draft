@@ -1,15 +1,10 @@
-import { useWallet } from "@solana/wallet-adapter-react";
-import type { FC, MouseEventHandler } from "react";
-import React, { useCallback, useMemo } from "react";
-import type { ButtonProps } from "./Button";
-import { WalletIcon } from "./WalletIcon";
+import { useWallet } from '@solana/wallet-adapter-react';
+import type { FC, MouseEventHandler } from 'react';
+import React, { useCallback, useMemo } from 'react';
+import type { ButtonProps } from './Button';
+import { WalletIcon } from './WalletIcon';
 
-export const WalletDisconnectButtonSidebar: FC<ButtonProps> = ({
-  children,
-  disabled,
-  onClick,
-  ...props
-}) => {
+export const WalletDisconnectButtonSidebar: FC<ButtonProps> = ({ children, disabled, onClick, ...props }) => {
   const { wallet, disconnect, disconnecting } = useWallet();
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
@@ -17,14 +12,14 @@ export const WalletDisconnectButtonSidebar: FC<ButtonProps> = ({
       if (onClick) onClick(event);
       if (!event.defaultPrevented) disconnect().catch(() => {});
     },
-    [onClick, disconnect],
+    [onClick, disconnect]
   );
 
   const content = useMemo(() => {
     if (children) return children;
-    if (disconnecting) return "Disconnecting ...";
-    if (wallet) return "Disconnect";
-    return "Disconnect Wallet";
+    if (disconnecting) return 'Disconnecting ...';
+    if (wallet) return 'Disconnect';
+    return 'Disconnect Wallet';
   }, [children, disconnecting, wallet]);
 
   return (

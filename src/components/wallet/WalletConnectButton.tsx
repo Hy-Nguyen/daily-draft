@@ -5,12 +5,7 @@ import type { ButtonProps } from './Button';
 import { Button } from './Button';
 import { WalletIcon } from './WalletIcon';
 
-export const WalletConnectButton: FC<ButtonProps> = ({
-  children,
-  disabled,
-  onClick,
-  ...props
-}) => {
+export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onClick, ...props }) => {
   const { wallet, connect, connecting, connected } = useWallet();
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
@@ -30,12 +25,7 @@ export const WalletConnectButton: FC<ButtonProps> = ({
   }, [children, connecting, connected, wallet]);
 
   return (
-    <Button
-      className=""
-      disabled={(disabled ?? !wallet) || connecting || connected}
-      onClick={handleClick}
-      {...props}
-    >
+    <Button className="" disabled={(disabled ?? !wallet) || connecting || connected} onClick={handleClick} {...props}>
       {content}
     </Button>
   );

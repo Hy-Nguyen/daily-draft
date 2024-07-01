@@ -6,11 +6,7 @@ export type CollapseProps = PropsWithChildren<{
   id: string;
 }>;
 
-export const Collapse: FC<CollapseProps> = ({
-  id,
-  children,
-  expanded = false
-}) => {
+export const Collapse: FC<CollapseProps> = ({ id, children, expanded = false }) => {
   const ref = useRef<HTMLDivElement>(null);
   const instant = useRef(true);
   const transition = 'height 250ms ease-out';
@@ -81,7 +77,7 @@ export const Collapse: FC<CollapseProps> = ({
       role="region"
       style={{
         height: 0,
-        transition: instant.current ? undefined : transition
+        transition: instant.current ? undefined : transition,
       }}
     >
       {children}

@@ -11,22 +11,12 @@ export interface WalletListItemProps {
   wallet: Wallet;
 }
 
-export const WalletListItem: FC<WalletListItemProps> = ({
-  handleClick,
-  tabIndex,
-  wallet
-}) => {
+export const WalletListItem: FC<WalletListItemProps> = ({ handleClick, tabIndex, wallet }) => {
   return (
     <li>
-      <ListButton
-        onClick={handleClick}
-        startIcon={<WalletIcon wallet={wallet} />}
-        tabIndex={tabIndex}
-      >
+      <ListButton onClick={handleClick} startIcon={<WalletIcon wallet={wallet} />} tabIndex={tabIndex}>
         {wallet.adapter.name}
-        {wallet.readyState === WalletReadyState.Installed && (
-          <span>Detected</span>
-        )}
+        {wallet.readyState === WalletReadyState.Installed && <span>Detected</span>}
       </ListButton>
     </li>
   );

@@ -3,46 +3,44 @@
 @tailwind utilities;
 
 * {
-    font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 .bg-lobby {
-    background-image: url('/public/Background/bg-lobby.png');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Ensures the image does not repeat */
-    height: 100%; /* Ensures the height covers the full viewport */
-    width: 100%;
-    
-
-  }
-  
-  .bg-hero {
-    background-image: url('/public/Background/bg-hero.png');
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Ensures the image does not repeat */
-   
-    width: 100%;
-    border-radius: 8px;
-  }
-
-  .game-filter-glow{
-    box-shadow: 0px 0px 12px 0px #52BE7054;
-  }
-
-.border-draft {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+  background-image: url('/public/Background/bg-lobby.png');
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Ensures the image does not repeat */
+  height: 100%; /* Ensures the height covers the full viewport */
+  width: 100%;
 }
 
-.bg-draft { 
-  background: #1A1B23;
+.bg-hero {
+  background-image: url('/public/Background/bg-hero.png');
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Ensures the image does not repeat */
+
+  width: 100%;
+  border-radius: 8px;
+}
+
+.game-filter-glow {
+  box-shadow: 0px 0px 12px 0px #52be7054;
+}
+
+.border-draft {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.bg-draft {
+  background: #1a1b23;
 }
 
 .text-draft {
-  color: #5A5C6F;
+  color: #5a5c6f;
 }
