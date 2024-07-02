@@ -9,6 +9,7 @@ export interface Player {
   form: number;
   total: number;
   price: number;
+  available: boolean;
 }
 
 interface PlayerDisplayProps extends Player {
@@ -41,14 +42,18 @@ export default function PlayerDisplay({ onAddPlayer, isSelected, ...player }: Pl
   return (
     <>
       <div className="grid grid-cols-7">
-        <div className="col-span-4 flex items-center justify-start space-x-3">
+        <div className="bg- col-span-4 flex items-center justify-start space-x-3">
           <motion.button
             className={`border-draft flex h-[50px] min-w-[50px] items-center justify-center ${
-              isSelected ? 'opacity-50 cursor-not-allowed' : ''
+              isSelected ? 'cursor-not-allowed opacity-50' : ''
             }`}
-            whileHover={isSelected ? {} : {
-              boxShadow: '0px 0px 4px #ffffff',
-            }}
+            whileHover={
+              isSelected
+                ? {}
+                : {
+                    boxShadow: '0px 0px 4px #ffffff',
+                  }
+            }
             onClick={handleAddPlayer}
             disabled={isSelected}
           >

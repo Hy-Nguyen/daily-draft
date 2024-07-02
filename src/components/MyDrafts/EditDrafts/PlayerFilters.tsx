@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import PlayerFilterTab from './PlayerFilterTabs';
 import DropdownFilter from '../../ui/DropdownFilter';
 

@@ -1,5 +1,5 @@
 import PlayerDisplay from './PlayerDisplay';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Pagination from '../../ui/Pagination';
 import { Player } from './PlayerDisplay';
 
@@ -44,16 +44,32 @@ export default function PlayerList({
 }: PlayerListProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const playersPerPage = 10;
+
+  const sortedPlayers = useMemo(() => {
+    return [...players].sort((a, b) => {
+      const aIsSelected = selectedPlayers.some((p) => p.id === a.id);
+      const bIsSelected = selectedPlayers.some((p) => p.id === b.id);
+
+      if (a.available === b.available) {
+        if (aIsSelected === bIsSelected) {
+          return 0;
+        }
+        return aIsSelected ? 1 : -1;
+      }
+      return a.available ? -1 : 1;
+    });
+  }, [players, selectedPlayers]);
+
   const indexOfLastPlayer = currentPage * playersPerPage;
   const indexOfFirstPlayer = indexOfLastPlayer - playersPerPage;
-  const currentPlayers = players.slice(indexOfFirstPlayer, indexOfLastPlayer);
+  const currentPlayers = sortedPlayers.slice(indexOfFirstPlayer, indexOfLastPlayer);
 
-  const totalPages = Math.ceil(players.length / playersPerPage);
+  const totalPages = Math.ceil(sortedPlayers.length / playersPerPage);
 
   return (
     <div className="relative mt-4 flex h-full w-full flex-col">
       <div id="labels" className="grid grid-cols-7 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]">
-        <h1 className="col-span-4">Player({players.length})</h1>
+        <h1 className="col-span-4">Player({sortedPlayers.length})</h1>
         <h1 className="col-span-1">Form</h1>
         <h1 className="col-span-1">Total</h1>
         <h1 className="col-span-1">Price</h1>

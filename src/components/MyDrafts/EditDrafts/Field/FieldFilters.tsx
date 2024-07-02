@@ -10,9 +10,10 @@ interface FieldFiltersProps {
   setName: any;
   position: any;
   setPosition: any;
+  onResetPlayers: () => void;
 }
 
-export default function FieldFilters({ name, setName, position, setPosition }: FieldFiltersProps) {
+export default function FieldFilters({ name, setName, position, setPosition, onResetPlayers }: FieldFiltersProps) {
   return (
     <div id="buttons" className="flex w-full justify-between space-x-3">
       <div id="left" className="w-1/2 space-y-3 p-4">
@@ -22,8 +23,7 @@ export default function FieldFilters({ name, setName, position, setPosition }: F
             <h1>Autocomplete</h1>
           </div>
           <div className="flex w-1/2 justify-between">
-            <motion.div
-              id="reset-search"
+            <motion.button
               className="border-draft flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
               initial={{
                 color: '#5A5C6F',
@@ -32,9 +32,10 @@ export default function FieldFilters({ name, setName, position, setPosition }: F
                 color: '#fff',
                 borderColor: '#fff',
               }}
+              onClick={onResetPlayers}
             >
               <Refresh />
-            </motion.div>
+            </motion.button>
             <motion.div
               id="reset-search"
               className="border-draft flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
