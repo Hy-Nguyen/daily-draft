@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function LiveStatus({ live }: { live: boolean }) {
   return live ? (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-start">
       <motion.svg
         width="24"
         height="24"

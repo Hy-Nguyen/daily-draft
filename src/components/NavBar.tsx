@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { WalletMultiButton } from './wallet';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
+import UserIcon from '../Icons/UserIcon';
+import { motion } from 'framer-motion';
 
 export default function NavBar() {
   return (
@@ -43,8 +45,18 @@ export default function NavBar() {
               LEADERBOARDS
             </NavLink>
           </div>
-          <div id="connect-wallet" className="flex h-full items-center">
+          <div id="connect-wallet" className="flex h-full items-center gap-4">
             <WalletMultiButton />
+            <motion.a
+              href="/user"
+              className="aspect-square w-fit rounded-[5px] bg-[#52BE70] p-2.5"
+              whileHover={{
+                scale: 1.1,
+                background: '#34A152',
+              }}
+            >
+              <UserIcon />
+            </motion.a>
           </div>
         </div>
       </nav>

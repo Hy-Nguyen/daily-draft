@@ -1,7 +1,7 @@
 import PlayerDisplay from './PlayerDisplay';
 import { useState } from 'react';
 import players from '../../../data/fieldPlayers.json';
-import Pagination from './Field/Pagination';
+import Pagination from '../../ui/Pagination';
 
 interface PlayerListProps {
   maxPrice: number | null;

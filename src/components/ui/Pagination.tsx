@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import LeftArrow from '../../../../Icons/LeftArrow';
-import RightArrow from '../../../../Icons/RightArrow';
-import DoubleLeftArrow from '../../../../Icons/DoubleLeftArrow';
-import DoubleRightArrow from '../../../../Icons/DoubleRightArrow';
+import LeftArrow from '../../Icons/LeftArrow';
+import RightArrow from '../../Icons/RightArrow';
+import DoubleLeftArrow from '../../Icons/DoubleLeftArrow';
+import DoubleRightArrow from '../../Icons/DoubleRightArrow';
 
 interface PaginationProps {
   currentPage: number;
@@ -11,21 +11,23 @@ interface PaginationProps {
 }
 
 export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
-  const startPage = Math.max(1, currentPage - 1);
-  const endPage = Math.min(totalPages, currentPage + 1);
-  const pageNumbers = Array.from(
-    {
-      length: endPage - startPage + 1 + (currentPage === 1 ? 1 : 0),
-    },
-    (_, index) => startPage + index
-  );
+  const getPageNumbers = () => {
+    if (totalPages <= 3) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }
 
-  if (currentPage === totalPages) {
-    const lastThreePages = [totalPages - 2, totalPages - 1, totalPages];
-    console.log(lastThreePages);
+    if (currentPage <= 2) {
+      return [1, 2, 3];
+    }
 
-    pageNumbers.splice(0, pageNumbers.length, ...lastThreePages);
-  }
+    if (currentPage >= totalPages - 1) {
+      return [totalPages - 2, totalPages - 1, totalPages];
+    }
+
+    return [currentPage - 1, currentPage, currentPage + 1];
+  };
+
+  const pageNumbers = getPageNumbers();
 
   const handlePageChange = (page: number) => {
     onPageChange(page);

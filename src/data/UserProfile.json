@@ -1,0 +1,121 @@
+{
+  "username": "Ghosty",
+  "contestsJoined": 27,
+  "contestsWon": 8,
+  "pfp": "/User/SamplePFP.png",
+  "startDate": "2023-03-15T00:00:00Z",
+  "transactions": [
+    {
+      "transactionId": "237651",
+      "date": "2024-06-30T14:23:11Z",
+      "amount": 2.5,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "184932",
+      "date": "2024-06-25T09:15:43Z",
+      "amount": 1.0,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "562398",
+      "date": "2024-06-18T18:30:22Z",
+      "amount": 3.5,
+      "type": "Purchase",
+      "status": false
+    },
+    {
+      "transactionId": "741025",
+      "date": "2024-06-10T11:45:37Z",
+      "amount": 1.5,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "903764",
+      "date": "2024-06-05T20:12:59Z",
+      "amount": 5.0,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "612845",
+      "date": "2024-05-29T16:08:14Z",
+      "amount": 2.0,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "438976",
+      "date": "2024-05-22T13:55:30Z",
+      "amount": 3.0,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "275109",
+      "date": "2024-05-15T10:40:48Z",
+      "amount": 1.8,
+      "type": "Purchase",
+      "status": false
+    },
+    {
+      "transactionId": "890432",
+      "date": "2024-05-08T22:17:03Z",
+      "amount": 4.2,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "516738",
+      "date": "2024-05-01T07:33:26Z",
+      "amount": 2.7,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "629384",
+      "date": "2024-04-25T19:05:51Z",
+      "amount": 1.3,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "147852",
+      "date": "2024-04-18T15:50:17Z",
+      "amount": 3.8,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "753951",
+      "date": "2024-04-10T12:28:42Z",
+      "amount": 2.2,
+      "type": "Purchase",
+      "status": false
+    },
+    {
+      "transactionId": "369258",
+      "date": "2024-04-03T08:14:09Z",
+      "amount": 4.5,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "951753",
+      "date": "2024-03-28T23:59:59Z",
+      "amount": 1.7,
+      "type": "Purchase",
+      "status": true
+    },
+    {
+      "transactionId": "826401",
+      "date": "2024-03-28T23:59:59Z",
+      "amount": 1.7,
+      "type": "Withdrawal",
+      "status": true
+    }
+  ]
+}

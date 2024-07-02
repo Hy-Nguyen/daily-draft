@@ -41,10 +41,10 @@ export default function DropdownFilter({
       ref={dropdownRef}
       className={`${className} bg-draft border-draft relative flex h-[${height || 50}px] ${width} items-center justify-start`}
     >
-      <div className="flex w-full items-center justify-between p-4" onClick={() => setIsOpen(!isOpen)}>
-        <h1 className="text-draft text-sm">{label || ''}</h1>
+      <div className="flex w-full items-center justify-between gap-2 p-4" onClick={() => setIsOpen(!isOpen)}>
+        <h1 className="text-draft text-base">{label || ''}</h1>
 
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-3 text-base">
           <h1>{selected ? selected : 'All'}</h1>
           <DropdownArrow isOpen={isOpen} />
         </div>

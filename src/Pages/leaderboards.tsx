@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 import LeaderboardSlot from '../components/Leaderboard/LeaderboardSlot';
 import leaderboardData from '../data/leaderboard.json';
-import Pagination from '../components/MyDrafts/EditDrafts/Field/Pagination';
+import Pagination from '../components/ui/Pagination';
 
 export default function Leaderboards() {
   const [currentUser, setCurrentUser] = useState(leaderboardData[0]);
@@ -49,7 +49,7 @@ export default function Leaderboards() {
   return (
     <>
       <main className="bg-lobby flex min-h-screen w-screen justify-center text-[#5A5C6F]">
-        <div id="container" className="mt-[5vh] flex h-full w-full max-w-[2000px] space-x-4">
+        <div id="container" className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] space-x-4">
           <AnimatePresence>
             <div id="my-drafts" className="relative h-full w-full rounded-[8px] bg-[#191A22] p-6 pb-[80px]">
               <div id="header" className="flex w-full justify-between">
