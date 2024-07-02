@@ -1,5 +1,5 @@
 import NavBar from '../components/NavBar';
-// App.js
+
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { NextUIProvider } from '@nextui-org/react';
@@ -34,12 +34,12 @@ const App = () => {
       ),
     },
     {
-      path: 'drafts/:id', // Add a parameter to the path
+      path: 'drafts/:id',
       element: (
         <Layout>
           <EditDraftPage />
         </Layout>
-      ), // Use the new component to handle the dynamic page
+      ),
     },
     {
       path: '/leaderboard',

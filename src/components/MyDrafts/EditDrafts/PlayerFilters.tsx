@@ -1,14 +1,14 @@
-import React from 'react';
-import DropdownFilter from '../../ui/DropdownFilter';
+import { motion } from 'framer-motion';
 import PlayerFilterTab from './PlayerFilterTabs';
+import DropdownFilter from '../../ui/DropdownFilter';
 
 interface PlayerFiltersProps {
   maxPrice: number | null;
-  setMaxPrice: React.Dispatch<React.SetStateAction<any>>;
-  availability: boolean;
-  setAvailability: React.Dispatch<React.SetStateAction<boolean>>;
-  playerType: any;
-  setPlayerType: React.Dispatch<React.SetStateAction<any>>;
+  setMaxPrice: React.Dispatch<React.SetStateAction<number | null>>;
+  availability: boolean | null;
+  setAvailability: React.Dispatch<React.SetStateAction<boolean | null>>;
+  playerType: string | null;
+  setPlayerType: React.Dispatch<React.SetStateAction<string | null>>;
   playerCounts: {
     GK: number;
     DF: number;
@@ -16,22 +16,6 @@ interface PlayerFiltersProps {
     FW: number;
   };
 }
-
-// 	const [playerType, setPlayerType] = useState<
-// 		string | null
-// 	>(null);
-// 	const [playerCounts, setPlayerCounts] =
-// 		useState({
-// 			GK: 0,
-// 			DF: 0,
-// 			MF: 0,
-// 			FW: 0,
-// 		});
-// 	const [searchInput, setSearchInput] =
-// 		useState("");
-// 	const [maxPrice, setMaxPrice] = useState(null);
-// 	const [availability, setAvailability] =
-// 		useState(false);
 
 export default function PlayerFilters({
   maxPrice,
@@ -49,17 +33,21 @@ export default function PlayerFilters({
           <DropdownFilter
             label="Max Price:"
             options={['100', '200', '300', '400', '500']}
-            selected={maxPrice}
-            setSelected={setMaxPrice}
+            selected={maxPrice?.toString() || ''}
+            setSelected={(value) => setMaxPrice(value ? Number(value) : null)}
             className="z-10"
           />
         </div>
         <div className="w-1/2">
           <DropdownFilter
             label="Availability:"
-            options={['Available', 'Not Available']}
-            selected={availability}
-            setSelected={setAvailability}
+            options={['All', 'Available', 'Not Available']}
+            selected={availability === null ? 'All' : availability ? 'Available' : 'Not Available'}
+            setSelected={(value) => {
+              if (value === 'All') setAvailability(null);
+              else if (value === 'Available') setAvailability(true);
+              else setAvailability(false);
+            }}
             className="z-10"
           />
         </div>
@@ -77,20 +65,20 @@ export default function PlayerFilters({
           label="DF"
           active={playerType === 'DF'}
           currentFilled={playerCounts.DF.toString()}
-          maxFilled={'3'}
+          maxFilled={'5'}
           setPlayerType={setPlayerType}
         />
         <PlayerFilterTab
           label="MF"
           active={playerType === 'MF'}
-          currentFilled={playerCounts.GK.toString()}
-          maxFilled={'4'}
+          currentFilled={playerCounts.MF.toString()}
+          maxFilled={'5'}
           setPlayerType={setPlayerType}
         />
         <PlayerFilterTab
           label="FW"
           active={playerType === 'FW'}
-          currentFilled={playerCounts.GK.toString()}
+          currentFilled={playerCounts.FW.toString()}
           maxFilled={'3'}
           setPlayerType={setPlayerType}
         />

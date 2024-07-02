@@ -1,14 +1,7 @@
+import { motion } from 'framer-motion';
 import Jersey from '../../../Icons/Jersey';
 import Plus from '../../../Icons/Plus';
 
-// {
-// 	id: 1,
-// 	name: "Cristiano Ronaldo",
-// 	position: "FW",
-// 	form: 8.5,
-// 	total: 8.5,
-// 	price: 10.5,
-// },
 export interface Player {
   id: number;
   name: string;
@@ -18,17 +11,54 @@ export interface Player {
   price: number;
 }
 
-export default function PlayerDisplay(player: Player) {
+interface PlayerDisplayProps extends Player {
+  onAddPlayer: (player: Player) => void;
+  isSelected: boolean;
+}
+
+export default function PlayerDisplay({ onAddPlayer, isSelected, ...player }: PlayerDisplayProps) {
+  const positionHandler = (position: string) => {
+    switch (position) {
+      case 'GK':
+        return 'GK';
+      case 'DF':
+        return 'DEF';
+      case 'MF':
+        return 'MID';
+      case 'FW':
+        return 'FOR';
+      default:
+        return 'UNK';
+    }
+  };
+
+  const handleAddPlayer = () => {
+    if (!isSelected) {
+      onAddPlayer(player);
+    }
+  };
+
   return (
     <>
       <div className="grid grid-cols-7">
         <div className="col-span-4 flex items-center justify-start space-x-3">
-          <div className="border-draft flex h-[50px] min-w-[50px] items-center justify-center">
+          <motion.button
+            className={`border-draft flex h-[50px] min-w-[50px] items-center justify-center ${
+              isSelected ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
+            whileHover={isSelected ? {} : {
+              boxShadow: '0px 0px 4px #ffffff',
+            }}
+            onClick={handleAddPlayer}
+            disabled={isSelected}
+          >
             <Plus />
-          </div>
+          </motion.button>
           <div className="relative flex aspect-square w-[50px] items-center justify-center">
             <Jersey />
-            <div className="absolute bottom-0 w-full rounded-[4px] bg-[#52BE70]/80 text-center">FOR</div>
+            <div className="absolute bottom-0 w-full rounded-[4px] bg-[#52BE70]/90 text-center">
+              {positionHandler(player.position)}
+            </div>
           </div>
           <div className="flex flex-col">
             <h1 className="font-bold">{player.name}</h1>

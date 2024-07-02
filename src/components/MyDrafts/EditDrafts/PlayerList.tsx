@@ -1,15 +1,16 @@
 import PlayerDisplay from './PlayerDisplay';
 import { useState } from 'react';
-import players from '../../../data/fieldPlayers.json';
 import Pagination from '../../ui/Pagination';
+import { Player } from './PlayerDisplay';
 
 interface PlayerListProps {
+  players: Player[];
   maxPrice: number | null;
-  setMaxPrice: React.Dispatch<React.SetStateAction<any>>;
-  availability: boolean;
-  setAvailability: React.Dispatch<React.SetStateAction<boolean>>;
-  playerType: any;
-  setPlayerType: React.Dispatch<React.SetStateAction<any>>;
+  setMaxPrice: React.Dispatch<React.SetStateAction<number | null>>;
+  availability: boolean | null;
+  setAvailability: React.Dispatch<React.SetStateAction<boolean | null>>;
+  playerType: string | null;
+  setPlayerType: React.Dispatch<React.SetStateAction<string | null>>;
   playerCounts: {
     GK: number;
     DF: number;
@@ -24,9 +25,12 @@ interface PlayerListProps {
       FW: number;
     }>
   >;
+  onAddPlayer: (player: Player) => void;
+  selectedPlayers: Player[];
 }
 
 export default function PlayerList({
+  players,
   maxPrice,
   setMaxPrice,
   availability,
@@ -35,6 +39,8 @@ export default function PlayerList({
   setPlayerType,
   playerCounts,
   setPlayerCounts,
+  onAddPlayer,
+  selectedPlayers,
 }: PlayerListProps) {
   const [currentPage, setCurrentPage] = useState(1);
   const playersPerPage = 10;
@@ -54,7 +60,12 @@ export default function PlayerList({
       </div>
       <div id="player-list" className="mt-4 w-full">
         {currentPlayers.map((player) => (
-          <PlayerDisplay key={player.id} {...player} />
+          <PlayerDisplay
+            key={player.id}
+            {...player}
+            onAddPlayer={onAddPlayer}
+            isSelected={selectedPlayers.some((p) => p.id === player.id)}
+          />
         ))}
       </div>
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />

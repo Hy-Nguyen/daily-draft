@@ -1,11 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useParams } from 'react-router-dom';
 import EditDraftHero from './EditDraftHero';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import SearchSection from './SearchSection';
 import PlayerFilters from './PlayerFilters';
 import PlayerList from './PlayerList';
 import DraftField from './Field/EditDraftField';
+import { Player } from './PlayerDisplay';
+import players from '../../../data/fieldPlayers.json';
 
 export default function EditDraftPage() {
   const { id } = useParams();
@@ -17,8 +18,49 @@ export default function EditDraftPage() {
     FW: 0,
   });
   const [searchInput, setSearchInput] = useState('');
-  const [maxPrice, setMaxPrice] = useState(null);
-  const [availability, setAvailability] = useState(false);
+  const [maxPrice, setMaxPrice] = useState<number | null>(null);
+  const [availability, setAvailability] = useState<boolean | null>(null);
+  const [selectedPlayers, setSelectedPlayers] = useState<Player[]>([]);
+
+  const filteredPlayers = useMemo(() => {
+    return players.filter((player) => {
+      const matchesSearch = player.name.toLowerCase().includes(searchInput.toLowerCase());
+      const matchesType = playerType === null || player.position === playerType;
+      const matchesPrice = maxPrice === null || player.price <= maxPrice;
+      const matchesAvailability = availability === null || player.available === availability;
+
+      return matchesSearch && matchesType && matchesPrice && matchesAvailability;
+    });
+  }, [players, searchInput, playerType, maxPrice, availability]);
+
+  const handleAddPlayer = (player: Player) => {
+    setSelectedPlayers((prevPlayers) => {
+      const positionCount = prevPlayers.filter((p) => p.position === player.position).length;
+      const maxPlayers = { GK: 1, DF: 5, MF: 5, FW: 3 }[player.position] || 0;
+
+      if (positionCount < maxPlayers) {
+        setPlayerCounts((prev) => ({
+          ...prev,
+          [player.position]: prev[player.position as keyof typeof prev] + 1,
+        }));
+        return [...prevPlayers, player];
+      }
+      return prevPlayers;
+    });
+  };
+
+  const handleRemovePlayer = (playerId: number) => {
+    setSelectedPlayers((prevPlayers) => {
+      const playerToRemove = prevPlayers.find((p) => p.id === playerId);
+      if (playerToRemove) {
+        setPlayerCounts((prev) => ({
+          ...prev,
+          [playerToRemove.position]: prev[playerToRemove.position as keyof typeof prev] - 1,
+        }));
+      }
+      return prevPlayers.filter((p) => p.id !== playerId);
+    });
+  };
 
   return (
     <>
@@ -41,8 +83,8 @@ export default function EditDraftPage() {
                 setPlayerType={setPlayerType}
                 playerCounts={playerCounts}
               />
-
               <PlayerList
+                players={filteredPlayers}
                 maxPrice={maxPrice}
                 setMaxPrice={setMaxPrice}
                 availability={availability}
@@ -51,19 +93,12 @@ export default function EditDraftPage() {
                 setPlayerType={setPlayerType}
                 playerCounts={playerCounts}
                 setPlayerCounts={setPlayerCounts}
+                onAddPlayer={handleAddPlayer}
+                selectedPlayers={selectedPlayers}
               />
             </div>
             <div className="border-draft bg-draft flex w-[68%] flex-col rounded-[8px] px-4 py-6">
-              <DraftField
-                maxPrice={maxPrice}
-                setMaxPrice={setMaxPrice}
-                availability={availability}
-                setAvailability={setAvailability}
-                playerType={playerType}
-                setPlayerType={setPlayerType}
-                playerCounts={playerCounts}
-                setPlayerCounts={setPlayerCounts}
-              />
+              <DraftField selectedPlayers={selectedPlayers} onRemovePlayer={handleRemovePlayer} />
             </div>
           </div>
         </div>
