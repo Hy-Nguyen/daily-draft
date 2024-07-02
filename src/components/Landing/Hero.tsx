@@ -1,8 +1,15 @@
 import Crown from '../../Icons/Crown';
+import { WalletMultiButton } from '../wallet';
+
+import { useWallet } from '@solana/wallet-adapter-react';
 
 export default function Hero() {
+  const { connected } = useWallet();
   return (
-    <header id="hero" className="bg-hero flex h-[400px] w-full flex-col justify-evenly rounded-3xl p-8 uppercase">
+    <header
+      id="hero"
+      className="bg-hero flex h-[400px] w-full flex-col justify-start gap-10 rounded-3xl p-8 pt-20 uppercase"
+    >
       <h1 className="text-4xl font-semibold">Player matchups</h1>
       <h2 className="text-2xl">
         pick <span className="text-[#52BE70]">3-10</span> duels
@@ -14,9 +21,7 @@ export default function Hero() {
           your stake
         </h3>
       </div>
-      <div className="flex h-[40px] w-[175px] items-center justify-center rounded-[8px] bg-[#52BE70]">
-        Connect Wallet
-      </div>
+      {!connected && <WalletMultiButton />}
     </header>
   );
 }
