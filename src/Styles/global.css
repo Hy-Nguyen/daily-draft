@@ -45,6 +45,22 @@
   color: #5a5c6f;
 }
 
+.table-fade-bottom {
+  -webkit-mask: linear-gradient(180deg, white 80%, transparent);
+  mask: linear-gradient(180deg, white 80%, transparent);
+  transition:
+    -webkit-mask 0.3s ease,
+    mask 0.3s ease;
+}
+
+tbody#lobby-table {
+  -webkit-mask: linear-gradient(180deg, white 100%, white);
+  mask: linear-gradient(180deg, white 100%, white);
+  transition:
+    -webkit-mask 0.3s ease,
+    mask 0.3s ease;
+}
+
 @layer utilities {
   input[type='date']::-webkit-calendar-picker-indicator {
     opacity: 0;

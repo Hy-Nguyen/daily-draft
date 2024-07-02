@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import GameFilters from './GameFilters';
 import Switch from '../ui/switch';
 import SearchIcon from '../../Icons/SearchIcon';
@@ -9,6 +9,41 @@ export default function LobbyTable() {
   const [gameFilter, setGameFilter] = useState('Running');
   const [searchValue, setSearchValue] = useState('');
   const [sortFilter, setSortFilter] = useState('All');
+
+  const tbodyRef = useRef<HTMLTableSectionElement | null>(null);
+
+  useEffect(() => {
+    const tbody = tbodyRef.current;
+    if (!tbody) return;
+
+    const checkOverflow = () => {
+      const isOverflowing = tbody.scrollHeight > tbody.clientHeight;
+      const isAtBottom = Math.abs(tbody.scrollHeight - tbody.scrollTop - tbody.clientHeight) < 1;
+
+      if (isOverflowing && !isAtBottom) {
+        tbody.style.setProperty('-webkit-mask', 'linear-gradient(180deg, white 80%, transparent)');
+        tbody.style.setProperty('mask', 'linear-gradient(180deg, white 80%, transparent)');
+      } else {
+        tbody.style.setProperty('-webkit-mask', 'linear-gradient(180deg, white 100%, white)');
+        tbody.style.setProperty('mask', 'linear-gradient(180deg, white 100%, white)');
+      }
+    };
+
+    // Check initially
+    checkOverflow();
+
+    // Check on scroll
+    tbody.addEventListener('scroll', checkOverflow);
+
+    // Check on window resize
+    window.addEventListener('resize', checkOverflow);
+
+    // Cleanup
+    return () => {
+      tbody.removeEventListener('scroll', checkOverflow);
+      window.removeEventListener('resize', checkOverflow);
+    };
+  }, []);
 
   return (
     <>
@@ -49,14 +84,19 @@ export default function LobbyTable() {
       </div>
       <table className="mt-3 w-full">
         <thead className="border-y">
-          <tr className="my-5 flex text-[16px] text-[#A7ADB9] *:text-start">
+          <tr className="my-5 flex text-[16px] text-[#A7ADB9] *:text-start *:font-normal">
             <th className="w-2/6">Tournament</th>
             <th className="w-1/6">Starts In</th>
             <th className="w-1/6">Duration</th>
             <th className="w-1/6">Prize Pool</th>
           </tr>
         </thead>
-        <tbody className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black mt-6 flex max-h-[400px] flex-col space-y-[20px] overflow-y-scroll pr-4">
+
+        <tbody
+          id="lobby-table"
+          ref={tbodyRef}
+          className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black mt-6 flex max-h-[500px] flex-col space-y-[20px] overflow-y-scroll pr-4"
+        >
           <LobbyGameDisplay
             matchName="Uefa Euro 2024"
             tournamentName="UEC DAILY MEGA WIN"
