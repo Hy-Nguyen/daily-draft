@@ -6,7 +6,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import SolanaWalletProvider from '../components/wallet/Providers';
 
 import Drafts from './Drafts';
-import Leaderboards from './leaderboards';
+import Leaderboard from './Leaderboard';
 import User from './User';
 import Hero from '../components/Landing/Hero';
 import LobbyTable from '../components/Landing/LobbyTable';
@@ -46,7 +46,7 @@ const App = () => {
 
       element: (
         <Layout>
-          <Leaderboards />
+          <Leaderboard />
         </Layout>
       ),
     },
@@ -83,7 +83,7 @@ function HomePage() {
   return (
     <>
       <main className="bg-lobby flex min-h-screen w-screen justify-center text-white">
-        <div id="container" className="mt-[5vh] h-full w-10/12 max-w-[2000px]">
+        <div id="container" className="mb-16 mt-[5vh] h-full w-10/12 max-w-[2000px]">
           <Hero />
           <hr className="my-10 opacity-10" />
           <LobbyTable />

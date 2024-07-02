@@ -18,27 +18,35 @@ export default function LobbyTable() {
 
     const checkOverflow = () => {
       const isOverflowing = tbody.scrollHeight > tbody.clientHeight;
+      const isAtTop = tbody.scrollTop === 0;
       const isAtBottom = Math.abs(tbody.scrollHeight - tbody.scrollTop - tbody.clientHeight) < 1;
 
-      if (isOverflowing && !isAtBottom) {
-        tbody.style.setProperty('-webkit-mask', 'linear-gradient(180deg, white 80%, transparent)');
-        tbody.style.setProperty('mask', 'linear-gradient(180deg, white 80%, transparent)');
+      let maskValue = '';
+
+      if (isOverflowing) {
+        if (!isAtTop && !isAtBottom) {
+          maskValue = 'linear-gradient(180deg, transparent, white 20%, white 80%, transparent)';
+        } else if (!isAtTop) {
+          maskValue = 'linear-gradient(180deg, transparent, white 20%, white)';
+        } else if (!isAtBottom) {
+          maskValue = 'linear-gradient(180deg, white, white 80%, transparent)';
+        } else {
+          maskValue = 'linear-gradient(180deg, white, white)';
+        }
       } else {
-        tbody.style.setProperty('-webkit-mask', 'linear-gradient(180deg, white 100%, white)');
-        tbody.style.setProperty('mask', 'linear-gradient(180deg, white 100%, white)');
+        maskValue = 'linear-gradient(180deg, white, white)';
       }
+
+      tbody.style.setProperty('-webkit-mask', maskValue);
+      tbody.style.setProperty('mask', maskValue);
     };
 
-    // Check initially
     checkOverflow();
 
-    // Check on scroll
     tbody.addEventListener('scroll', checkOverflow);
 
-    // Check on window resize
     window.addEventListener('resize', checkOverflow);
 
-    // Cleanup
     return () => {
       tbody.removeEventListener('scroll', checkOverflow);
       window.removeEventListener('resize', checkOverflow);
