@@ -6,7 +6,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import SolanaWalletProvider from '../components/wallet/Providers';
 
 import Drafts from './Drafts';
-import Leaderboards from './Leaderboards';
+import Leaderboards from './leaderboards';
 import User from './User';
 import Hero from '../components/Landing/Hero';
 import LobbyTable from '../components/Landing/LobbyTable';
