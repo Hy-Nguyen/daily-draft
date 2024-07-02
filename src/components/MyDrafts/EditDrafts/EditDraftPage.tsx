@@ -2,10 +2,6 @@
 import { useParams } from 'react-router-dom';
 import EditDraftHero from './EditDraftHero';
 import { useState } from 'react';
-import NavBar from '../../NavBar';
-
-import players from '../../../data/players.json';
-import { motion } from 'framer-motion';
 import SearchSection from './SearchSection';
 import PlayerFilters from './PlayerFilters';
 import PlayerList from './PlayerList';
@@ -26,7 +22,6 @@ export default function EditDraftPage() {
 
   return (
     <>
-      <NavBar />
       <main className="bg-lobby flex min-h-screen w-screen justify-center pb-10 text-white">
         <div
           id="container"

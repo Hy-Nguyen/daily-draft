@@ -2,7 +2,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import GameFilters from '../components/Landing/GameFilters';
 import DraftItem from '../components/MyDrafts/DraftItem';
 import DraftFilter from '../components/MyDrafts/Filter';
-import NavBar from '../components/NavBar';
 import { useState } from 'react';
 
 export default function Drafts() {
@@ -26,7 +25,6 @@ export default function Drafts() {
 
   return (
     <>
-      <NavBar />
       <main className="bg-lobby flex min-h-screen w-screen justify-center text-[#5A5C6F]">
         <div id="container" className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] space-x-4">
           <DraftFilter

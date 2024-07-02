@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Search from '../../../Icons/Search';
+import Search from '../../../Icons/SearchIcon';
 import Refresh from '../../../Icons/Refresh';
 import { useState } from 'react';
 

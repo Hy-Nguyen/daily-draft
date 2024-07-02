@@ -32,7 +32,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
   };
 
   return (
-    <div className="absolute bottom-0 flex w-full items-center justify-center space-x-3">
+    <div className="absolute bottom-4 flex w-full items-center justify-center space-x-3">
       <motion.button
         onClick={() => handlePageChange(1)}
         disabled={currentPage === 1}

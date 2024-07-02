@@ -7,6 +7,7 @@ interface DropdownFilterProps {
   setSelected: React.Dispatch<React.SetStateAction<any>>;
   options: any[];
   label?: string;
+  width?: string;
   height?: string;
   className?: string;
 }
@@ -18,6 +19,7 @@ export default function DropdownFilter({
   label,
   height,
   className,
+  width = 'w-full',
 }: DropdownFilterProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -37,7 +39,7 @@ export default function DropdownFilter({
   return (
     <div
       ref={dropdownRef}
-      className={`${className} bg-draft border-draft relative flex h-[${height || 50}px] w-full items-center justify-start`}
+      className={`${className} bg-draft border-draft relative flex h-[${height || 50}px] ${width} items-center justify-start`}
     >
       <div className="flex w-full items-center justify-between p-4" onClick={() => setIsOpen(!isOpen)}>
         <h1 className="text-draft text-sm">{label || ''}</h1>

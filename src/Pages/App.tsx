@@ -7,6 +7,7 @@ import SolanaWalletProvider from '../components/wallet/Providers';
 
 import Drafts from './Drafts';
 import Leaderboards from './Leaderboards';
+import User from './User';
 import Hero from '../components/Landing/Hero';
 import LobbyTable from '../components/Landing/LobbyTable';
 import EditDraftPage from '../components/MyDrafts/EditDrafts/EditDraftPage';
@@ -18,19 +19,44 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <HomePage />,
+      element: (
+        <Layout>
+          <HomePage />
+        </Layout>
+      ),
     },
     {
       path: 'drafts',
-      element: <Drafts />,
+      element: (
+        <Layout>
+          <Drafts />
+        </Layout>
+      ),
     },
     {
       path: 'drafts/:id', // Add a parameter to the path
-      element: <EditDraftPage />, // Use the new component to handle the dynamic page
+      element: (
+        <Layout>
+          <EditDraftPage />
+        </Layout>
+      ), // Use the new component to handle the dynamic page
     },
     {
       path: '/leaderboard',
-      element: <Leaderboards />,
+
+      element: (
+        <Layout>
+          <Leaderboards />
+        </Layout>
+      ),
+    },
+    {
+      path: '/user',
+      element: (
+        <Layout>
+          <User />
+        </Layout>
+      ),
     },
   ]);
   return (
@@ -44,10 +70,18 @@ const App = () => {
 
 export default App;
 
-function HomePage() {
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <NavBar />
+      {children}
+    </>
+  );
+}
+
+function HomePage() {
+  return (
+    <>
       <main className="bg-lobby flex min-h-screen w-screen justify-center text-white">
         <div id="container" className="mt-[5vh] h-full w-10/12 max-w-[2000px]">
           <Hero />

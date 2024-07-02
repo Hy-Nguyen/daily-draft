@@ -1,63 +1,78 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+'use client';
 
-import LeaderboardFilter from '../components/Leaderboard/LeaderboardFilter';
-import NavBar from '../components/NavBar';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+
 import LeaderboardSlot from '../components/Leaderboard/LeaderboardSlot';
 import leaderboardData from '../data/leaderboard.json';
 import Pagination from '../components/MyDrafts/EditDrafts/Field/Pagination';
 
-interface Slot {
-  avatar: string;
-  name: string;
-  played: number;
-  rank: number;
-  won: number;
-}
-
 export default function Leaderboards() {
-  const [leagues, setLeagues] = useState('');
-  const [duration, setDuration] = useState('');
-  const [draftTypes, setDraftTypes] = useState('');
-  const [geography, setGeography] = useState('');
-
+  const [currentUser, setCurrentUser] = useState(leaderboardData[0]);
   const [currentPage, setCurrentPage] = useState(1);
-  const playersPerPage = 10;
+  const playersPerPage = 9; // Reduced to 9 to make room for the current user
   const indexOfLastPlayer = currentPage * playersPerPage;
   const indexOfFirstPlayer = indexOfLastPlayer - playersPerPage;
-  const currentListing = leaderboardData.slice(indexOfFirstPlayer, indexOfLastPlayer);
+
+  useEffect(() => {
+    // Select a random player as the current user when the component mounts
+    const randomPlayer = getRandomPlayer(leaderboardData);
+    setCurrentUser(randomPlayer);
+  }, []);
+
+  const prepareLeaderboardData = () => {
+    if (!currentUser) return leaderboardData.slice(indexOfFirstPlayer, indexOfLastPlayer);
+
+    // Filter out the current user from the main list
+    const otherPlayers = leaderboardData.filter((player) => player.rank !== currentUser.rank);
+
+    // Slice the remaining players
+    const slicedPlayers = otherPlayers.slice(indexOfFirstPlayer, indexOfLastPlayer);
+
+    // Return an array with the current user at the top, followed by other players
+    return [currentUser, ...slicedPlayers];
+  };
+
+  const currentListing = prepareLeaderboardData();
 
   const totalPages = Math.ceil(leaderboardData.length / playersPerPage);
 
+  function getRandomPlayer(players: any) {
+    if (!Array.isArray(players) || players.length === 0) {
+      return null; // Return null if the input is not a valid array or is empty
+    }
+
+    const randomIndex = Math.floor(Math.random() * players.length);
+    return players[randomIndex];
+  }
+
   return (
     <>
-      <NavBar />
       <main className="bg-lobby flex min-h-screen w-screen justify-center text-[#5A5C6F]">
-        <div id="container" className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] space-x-4">
-          <LeaderboardFilter
-            states={[leagues, duration, draftTypes, geography]}
-            setStates={[setLeagues, setDuration, setDraftTypes, setGeography]}
-          />
+        <div id="container" className="mt-[5vh] flex h-full w-full max-w-[2000px] space-x-4">
           <AnimatePresence>
-            <div id="my-drafts" className="h-full w-3/4 rounded-[8px] bg-[#191A22] p-6">
+            <div id="my-drafts" className="relative h-full w-full rounded-[8px] bg-[#191A22] p-6 pb-[80px]">
               <div id="header" className="flex w-full justify-between">
                 <h1 className="text-2xl font-semibold text-white">Leaderboard</h1>
-                <div id="filters" className="flex space-x-3"></div>
               </div>
-              <motion.div id="table" className="relative mt-6 pb-[70px]">
-                <motion.div id="header" className="grid grid-cols-12 border-b border-white/10 pb-4">
-                  <h1 className="col-span-1">Rank</h1>
-                  <h1 className="col-span-7">Name</h1>
-                  <h1 className="col-span-2">Played</h1>
-                  <h1 className="col-span-2">Won</h1>
-                </motion.div>
+              <motion.table className="mt-6 w-full pb-[70px]">
+                <motion.tr id="header" className="grid w-full grid-cols-12 border-b border-white/10 pb-4 *:text-start">
+                  <th className="col-span-1">Rank</th>
+                  <th className="col-span-7">Name</th>
+                  <th className="col-span-2">Played</th>
+                  <th className="col-span-2">Won</th>
+                </motion.tr>
                 <motion.div id="my-drafts">
-                  {currentListing.map((slot) => (
-                    <LeaderboardSlot {...slot} />
+                  {currentListing.map((slot, index) => (
+                    <LeaderboardSlot
+                      key={slot.rank}
+                      {...slot}
+                      isCurrentUser={index === 0 && slot.rank === currentUser?.rank}
+                    />
                   ))}
                 </motion.div>
                 <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
-              </motion.div>
+              </motion.table>
             </div>
           </AnimatePresence>
         </div>
