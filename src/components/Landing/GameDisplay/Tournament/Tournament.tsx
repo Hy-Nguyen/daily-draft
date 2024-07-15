@@ -11,8 +11,8 @@ export default function Tournament({
   durationTime: string;
 }) {
   return (
-    <div id="Tournament" className="flex w-2/6 items-center">
-      <div id="images" className="ml-4 flex w-[14.5%]">
+    <div id="Tournament" className="flex w-2/6 items-center outline">
+      <div id="images" className="relative ml-4 flex w-[14.5%]">
         <TournamentImage />
         <TournamentImageRight />
       </div>

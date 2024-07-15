@@ -75,7 +75,7 @@ export default function LobbyTable() {
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search for a team, player or bet."
-              className="h-[40px] w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F] focus:outline-none"
+              className="h-[40px] w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F] text-white focus:outline-none"
             />
           </div>
         </div>
