@@ -25,16 +25,16 @@ export default function Participate() {
     }
   }, []);
   return (
-    <div id="button" className="w-1/6">
+    <div id="button" className="my-2 w-full md:col-span-1 md:my-0">
       <motion.button
-        className="relative flex h-[35px] w-fit items-center rounded-[6px] bg-[#52BE70] px-3"
+        className="relative flex h-[35px] w-full items-center rounded-[6px] bg-[#52BE70]"
         whileHover={{
           scale: 1.1,
           boxShadow: '0px 0px 18px 0px #52BE70',
         }}
         onClick={onOpen}
       >
-        <p className="text-[16px] font-semibold text-[#141414]">participate</p>
+        <p className="w-full text-center text-[16px] font-semibold text-[#141414]">participate</p>
         <div className="absolute -right-2 -top-2 rotate-[30deg]">
           <Crown />
         </div>
@@ -53,22 +53,24 @@ export default function Participate() {
         <ModalContent>
           {(onClose) => (
             <div className="flex w-full flex-col items-center">
-              <ModalHeader className="grid w-10/12 grid-cols-5 text-white">
-                <div className="flex items-center justify-start">
-                  <p>icon</p>
-                </div>
-                <div className="col-span-3 flex flex-col">
-                  <h1 className="text-[16px] font-semibold">Tournament name</h1>
-                  <h1 className="text-[14px] font-normal text-[#52BE70]">Game Week 01</h1>
+              <ModalHeader className="flex w-10/12 grid-cols-5 flex-col text-white md:grid">
+                <div className="col-span-4 grid w-full grid-cols-4">
+                  <div className="flex items-center justify-start">
+                    <p>icon</p>
+                  </div>
+                  <div className="col-span-3 flex flex-col">
+                    <h1 className="text-[16px] font-semibold">Tournament name</h1>
+                    <h1 className="text-[14px] font-normal text-[#52BE70]">Game Week 01</h1>
+                  </div>
                 </div>
                 <motion.button
-                  className="relative col-span-1 my-2 flex w-fit items-center rounded-[6px] bg-[#52BE70] px-3"
+                  className="relative col-span-1 my-2 flex w-full items-center rounded-[6px] bg-[#52BE70] px-3 md:w-fit"
                   whileHover={{
                     scale: 1.1,
                     boxShadow: '0px 0px 18px 0px #52BE70',
                   }}
                 >
-                  <p className="text-[16px] font-semibold text-[#141414]">participate</p>
+                  <p className="w-full text-center text-[16px] font-semibold text-[#141414]">participate</p>
                   <div className="absolute -right-2 -top-2 rotate-[30deg]">
                     <Crown />
                   </div>

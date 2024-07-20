@@ -1,14 +1,20 @@
 export function TournamentImage() {
   return (
-    <div id="image" className="flex aspect-square w-3/5 items-center justify-center rounded-full bg-[#131619] py-2">
-      <img src="/Lobby/Madrid.png" alt="Team one" className="h-1/2 w-1/2 object-cover" />
+    <div
+      id="image"
+      className="absolute right-4 flex aspect-square w-fit flex-shrink-0 items-center justify-center rounded-full bg-[#131619] p-2"
+    >
+      <img src="/Lobby/Madrid.png" alt="Team one" className="size-6 object-cover" />
     </div>
   );
 }
 export function TournamentImageRight() {
   return (
-    <div id="image" className="flex aspect-square w-3/5 items-center justify-center rounded-full bg-[#131619] py-2">
-      <img src="/Lobby/Madrid.png" alt="Team Two" className="h-1/2 w-1/2 object-cover" />
+    <div
+      id="image"
+      className="absolute -right-2 flex aspect-square w-fit flex-shrink-0 items-center justify-center rounded-full bg-[#131619] p-2"
+    >
+      <img src="/Lobby/Madrid.png" alt="Team Two" className="size-6 object-cover" />
     </div>
   );
 }

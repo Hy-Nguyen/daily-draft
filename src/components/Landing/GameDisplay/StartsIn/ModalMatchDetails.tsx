@@ -2,7 +2,7 @@ export default function ModalMatchDetails() {
   return (
     <div
       id="match-details"
-      className="grid w-full grid-cols-3 border-b border-[#515954] bg-[#1A1B23] py-4 last:border-b-0"
+      className="flex w-full grid-cols-3 border-b border-[#515954] bg-[#1A1B23] py-4 last:border-b-0 md:grid"
     >
       <div id="team1" className="flex flex-row-reverse items-center justify-start font-semibold">
         <div>icon</div>

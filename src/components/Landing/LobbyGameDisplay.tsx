@@ -20,11 +20,13 @@ export default function LobbyGameDisplay({
   poolTeams: number;
 }) {
   return (
-    <tr className="my-2 flex min-h-[70px] w-full items-center rounded-[8px] border border-[#FFFFFF]/5 bg-[#1A1B23]">
+    <tr className="my-2 flex h-fit w-full grid-cols-12 grid-rows-1 flex-col items-center gap-4 rounded-[8px] border border-[#FFFFFF]/5 bg-[#1A1B23] px-4 py-2 md:grid">
       <Tournament matchName={matchName} tournamentName={tournamentName} durationTime={durationTime} />
       <StartsIn liveStatus={liveStatus} />
-      <Duration durationTime={durationTime} />
-      <PrizePool prizePool={prizePool} poolTeams={poolTeams} />
+      <div className="flex w-full justify-between gap-2 md:col-span-3 md:grid md:grid-cols-3 md:gap-4">
+        <Duration durationTime={durationTime} />
+        <PrizePool prizePool={prizePool} poolTeams={poolTeams} />
+      </div>
       <Participate />
     </tr>
   );

@@ -7,8 +7,10 @@ export default function ViewDetails() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   return (
     <>
-      <div className="ml-4 flex items-center justify-center hover:cursor-pointer" onClick={onOpen}>
-        <h1 className="mr-4 font-light text-[#A7ADB9]">View Details</h1>
+      <div className="ml-4 flex items-center justify-center" onClick={onOpen}>
+        <h1 className="mr-4 font-light text-[#A7ADB9] underline-offset-4 transition-all hover:cursor-pointer hover:underline">
+          Details
+        </h1>
         <DetailsArrow />
       </div>
       <Modal
@@ -30,7 +32,7 @@ export default function ViewDetails() {
               <ModalBody className="flex items-center text-[#A7ADB9]">
                 <div
                   id="container"
-                  className="flex w-10/12 flex-col items-center justify-center overflow-hidden rounded-[5px]"
+                  className="flex w-full flex-col items-center justify-center overflow-hidden rounded-[5px] md:w-10/12"
                 >
                   <ModalMatchDetails />
                   <ModalMatchDetails />

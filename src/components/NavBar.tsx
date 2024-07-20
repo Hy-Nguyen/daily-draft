@@ -84,7 +84,7 @@ export default function NavBar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="fixed inset-0 z-50 flex h-screen max-w-[100vw] origin-top flex-col items-start justify-between overflow-scroll bg-[#121318] pb-[120px] pt-4 text-white lg:hidden"
+              className="fixed inset-0 z-50 flex min-h-[100dvh] max-w-[100vw] origin-top flex-col items-start justify-between overflow-scroll bg-[#121318] pb-[120px] pt-4 text-white lg:hidden"
               initial={{ y: '-100vh' }}
               animate={{
                 opacity: 1,
@@ -140,7 +140,7 @@ export default function NavBar() {
         </AnimatePresence>
       </nav>
       <div className="flex h-[50px] w-full max-w-[100vw] items-center justify-center bg-[#52BE70]">
-        <Carousel>
+        <Carousel className="w-3/4 md:w-1/2">
           <CarouselContent className="[&>*]:text-center [&>*]:text-[14px] [&>*]:font-semibold [&>*]:text-white">
             <CarouselItem>FOLLOW US ON TWITTER FOR $50</CarouselItem>
             <CarouselItem>FOLLOW US ON TWITTER FOR $100</CarouselItem>

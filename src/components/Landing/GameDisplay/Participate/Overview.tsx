@@ -51,7 +51,7 @@ export default function OverviewBody() {
       </div>
       <div className="grid w-full grid-cols-2">
         <h1 className="text-base font-normal text-[#5A5C6F]">Details</h1>
-        <div className="flex w-full">
+        <div className="flex w-full flex-row gap-2">
           <GreenBadge time="50M" />
           <YellowBadge />
         </div>

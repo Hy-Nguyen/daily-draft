@@ -3,7 +3,7 @@ import ViewDetails from './ViewDetails';
 
 export default function StartsIn({ liveStatus }: { liveStatus: boolean }) {
   return (
-    <div id="timer" className="flex w-1/6">
+    <div id="timer" className="col-span-2 flex w-full items-center justify-between md:pl-4">
       <div id="status" className="flex items-center justify-center">
         <LiveStatus live={liveStatus} />
       </div>

@@ -11,7 +11,7 @@ export default function GameFilters({
 }) {
   return (
     <motion.button
-      className={`flex h-[30px] w-[94px] items-center justify-center rounded-[6px] border bg-[#1B1D28] ${active ? 'game-filter-glow border-[#52BE70]' : 'border-white/5'}`}
+      className={`flex h-[30px] w-fit items-center justify-center rounded-[6px] border bg-[#1B1D28] px-3 ${active ? 'game-filter-glow border-[#52BE70]' : 'border-white/5'}`}
       onClick={() => setActive(text)}
       whileHover={{ borderColor: '#52BE70' }}
       animate={{
@@ -20,7 +20,7 @@ export default function GameFilters({
       transition={{ duration: 0.5 }}
     >
       <motion.p
-        className={`text-center text-[10px] font-semibold ${active ? 'text-[#52BE70]' : 'text-[#5A5C6F]'}`}
+        className={`whitespace-nowrap text-center text-[12px] font-semibold ${active ? 'text-[#52BE70]' : 'text-[#5A5C6F]'}`}
         animate={{
           color: active ? '#52BE70' : '#5A5C6F',
         }}

@@ -82,7 +82,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 function HomePage() {
   return (
     <>
-      <main className="bg-lobby flex min-h-screen w-screen justify-center text-white">
+      <main className="bg-lobby flex min-h-screen max-w-[100vw] justify-center overflow-hidden text-white">
         <div id="container" className="mb-16 mt-[5vh] h-full w-10/12 max-w-[2000px]">
           <Hero />
           <hr className="my-10 opacity-10" />

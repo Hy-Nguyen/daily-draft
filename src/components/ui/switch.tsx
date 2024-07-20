@@ -9,7 +9,7 @@ export default function Switch() {
   };
 
   return (
-    <>
+    <div className="flex w-full items-center gap-2 md:w-fit md:justify-center">
       <div
         className="flex w-full items-center border border-white/5"
         style={{
@@ -47,6 +47,6 @@ export default function Switch() {
       >
         High rollers
       </h1>
-    </>
+    </div>
   );
 }
