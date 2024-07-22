@@ -18,7 +18,7 @@ interface UserProfileViewProps {
 export default function UserProfileView({ user }: { user: UserProfileViewProps }) {
   let formattedStartDate = dateFormatter(user.startDate);
   return (
-    <div className="flex w-1/5 flex-col items-center justify-start gap-4 p-2">
+    <div className="flex w-full flex-col items-center justify-start gap-4 p-2 md:w-1/5">
       <div className="flex w-full items-center justify-center rounded-[8px] border border-[#52BE70] bg-[#52BE70]/15 p-2">
         <h1 className="w-fit font-light text-[#52BE70]">Member since: {formattedStartDate}</h1>
       </div>

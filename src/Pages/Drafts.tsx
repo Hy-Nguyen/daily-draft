@@ -26,16 +26,16 @@ export default function Drafts() {
   return (
     <>
       <main className="bg-lobby flex min-h-screen w-screen justify-center text-[#5A5C6F]">
-        <div id="container" className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] space-x-4">
+        <div id="container" className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] flex-col gap-4 md:flex-row">
           <DraftFilter
             states={[sports, leagues, duration, draftTypes, drafts]}
             setStates={[setSports, setLeagues, setDuration, setDraftTypes, setDrafts]}
           />
           <AnimatePresence>
-            <div id="my-drafts" className="h-full w-3/4 rounded-[8px] bg-[#191A22] p-6">
-              <div id="header" className="flex w-full justify-between">
-                <h1 className="text-[18px] text-white">My Drafts</h1>
-                <div id="filters" className="flex space-x-3">
+            <div id="my-drafts" className="h-full w-full rounded-[8px] bg-[#191A22] p-6 md:w-3/4">
+              <div id="header" className="flex w-full flex-col justify-between gap-2 md:flex-row">
+                <h1 className="min-w-fit text-[18px] text-white">My Drafts</h1>
+                <div id="filters" className="flex w-full space-x-3 overflow-x-scroll">
                   {filters.map((filter) => (
                     <GameFilters
                       key={filter}

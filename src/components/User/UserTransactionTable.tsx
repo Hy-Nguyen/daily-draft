@@ -61,13 +61,13 @@ export default function UserTransactionTable({ transactions }: { transactions: a
   );
 
   return (
-    <div className="relative flex w-4/5 flex-col gap-6 p-2 pb-20">
+    <div className="relative flex w-full flex-col gap-6 p-2 pb-20 md:w-4/5">
       <TableFilters
         transactionFilters={transactionFilters}
         handleFilterChange={handleFilterChange}
         resetFilters={resetFilters}
       />
-      <table className="flex w-full flex-col bg-[#191A22] text-white">
+      <table className="flex w-full flex-col overflow-x-scroll bg-[#191A22] text-white">
         <thead className="flex w-full border-b border-[#2F3037] py-2">
           <tr className="grid w-full grid-cols-9 *:text-start *:text-base *:font-normal *:text-[#5A5C6F]">
             <th className="col-span-1">ID</th>
@@ -77,7 +77,7 @@ export default function UserTransactionTable({ transactions }: { transactions: a
             <th className="col-span-3">Status</th>
           </tr>
         </thead>
-        <tbody className="flex w-full flex-col">
+        <tbody className="flex w-full min-w-fit flex-col">
           {paginatedTransactions.map((transaction, index) => (
             <TransactionItem key={index} {...transaction} />
           ))}

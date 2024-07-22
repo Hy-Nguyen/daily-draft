@@ -49,7 +49,7 @@ export default function DraftItem({ completed }: DraftItemProps) {
   } else {
     return (
       <>
-        <div className="mt-2 grid h-[56px] w-full grid-cols-12 items-center border-b border-white/10 text-white">
+        <div className="mt-2 flex flex-col md:grid h-[56px] w-full grid-cols-12 items-center border-b border-white/10 text-white">
           <div className="col-span-4 grid grid-cols-2">
             <div className="flex flex-col">
               <h1 className="text-xs text-[#5A5C6F]">Cup</h1>

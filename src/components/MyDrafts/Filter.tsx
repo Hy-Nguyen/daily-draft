@@ -7,7 +7,7 @@ export default function DraftFilter({ states, setStates }: { states: any[]; setS
     <>
       <form
         id="filters"
-        className="h-full w-1/4 rounded-[8px] bg-[#1A1B23] px-6 py-4"
+        className="h-full w-full rounded-[8px] bg-[#1A1B23] px-6 py-4 md:w-1/4"
         onSubmit={(e) => e.preventDefault()}
       >
         <div id="filter-header" className="flex h-[50px] w-full items-center justify-between">

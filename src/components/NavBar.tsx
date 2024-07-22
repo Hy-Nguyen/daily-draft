@@ -102,6 +102,7 @@ export default function NavBar() {
               <div className="flex h-3/4 w-full flex-col items-center justify-center gap-4">
                 <NavLink
                   to={'/'}
+                  onClick={() => setIsOpen(false)}
                   className={({ isActive }) => {
                     return isActive ? 'border-[#52BE70]' : 'border-[#121318] text-[#525252]';
                   }}
@@ -110,6 +111,7 @@ export default function NavBar() {
                 </NavLink>
                 <NavLink
                   to={'/drafts'}
+                  onClick={() => setIsOpen(false)}
                   className={({ isActive }) => {
                     return isActive ? 'border-[#52BE70]' : 'border-[#121318] text-[#525252]';
                   }}
@@ -118,6 +120,7 @@ export default function NavBar() {
                 </NavLink>
                 <NavLink
                   to={'/leaderboard'}
+                  onClick={() => setIsOpen(false)}
                   className={({ isActive }) => {
                     return isActive ? 'border-[#52BE70]' : 'border-[#121318] text-[#525252]';
                   }}
@@ -127,6 +130,7 @@ export default function NavBar() {
 
                 <NavLink
                   to={'/user'}
+                  onClick={() => setIsOpen(false)}
                   className={({ isActive }) => {
                     return isActive ? 'border-[#52BE70]' : 'border-[#121318] text-[#525252]';
                   }}

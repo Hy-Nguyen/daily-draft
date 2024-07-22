@@ -7,8 +7,8 @@ export default function User() {
 
   return (
     <>
-      <main className="bg-lobby  flex min-h-screen w-screen justify-center text-white">
-        <div className=" mt-[5vh] flex h-full min-h-[600px] w-10/12 max-w-[2000px] gap-20 bg-[#191A22] p-4">
+      <main className="bg-lobby flex min-h-screen w-screen justify-center text-white">
+        <div className="mt-[5vh] flex h-full min-h-[600px] w-10/12 max-w-[2000px] flex-col gap-20 bg-[#191A22] p-4 md:flex-row">
           <UserProfileView user={user} />
           <UserTransactionTable transactions={user.transactions} />
         </div>
