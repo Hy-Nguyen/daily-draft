@@ -1,57 +1,91 @@
-import { useEffect, useRef, useState } from 'react';
-import GameFilters from './GameFilters';
-import Switch from '../ui/switch';
-import SearchIcon from '../../Icons/SearchIcon';
-import LobbyGameDisplay from './LobbyGameDisplay';
-import DropdownFilter from '../ui/DropdownFilter';
+import {
+	useEffect,
+	useRef,
+	useState,
+} from "react";
+import GameFilters from "./GameFilters";
+import Switch from "../ui/switch";
+import SearchIcon from "../../Icons/SearchIcon";
+import LobbyGameDisplay from "./LobbyGameDisplay";
+import DropdownFilter from "../ui/DropdownFilter";
 
 export default function LobbyTable() {
-  const [gameFilter, setGameFilter] = useState('Running');
-  const [searchValue, setSearchValue] = useState('');
-  const [sortFilter, setSortFilter] = useState('All');
+	const [gameFilter, setGameFilter] =
+		useState("Running");
+	const [searchValue, setSearchValue] =
+		useState("");
+	const [sortFilter, setSortFilter] =
+		useState("All");
 
-  const tbodyRef = useRef<HTMLTableSectionElement | null>(null);
+	const tbodyRef =
+		useRef<HTMLTableSectionElement | null>(null);
 
-  useEffect(() => {
-    const tbody = tbodyRef.current;
-    if (!tbody) return;
+	useEffect(() => {
+		const tbody = tbodyRef.current;
+		if (!tbody) return;
 
-    const checkOverflow = () => {
-      const isOverflowing = tbody.scrollHeight > tbody.clientHeight;
-      const isAtTop = tbody.scrollTop === 0;
-      const isAtBottom = Math.abs(tbody.scrollHeight - tbody.scrollTop - tbody.clientHeight) < 1;
+		const checkOverflow = () => {
+			const isOverflowing =
+				tbody.scrollHeight > tbody.clientHeight;
+			const isAtTop = tbody.scrollTop === 0;
+			const isAtBottom =
+				Math.abs(
+					tbody.scrollHeight -
+						tbody.scrollTop -
+						tbody.clientHeight
+				) < 1;
 
-      let maskValue = '';
+			let maskValue = "";
 
-      if (isOverflowing) {
-        if (!isAtTop && !isAtBottom) {
-          maskValue = 'linear-gradient(180deg, transparent, white 20%, white 80%, transparent)';
-        } else if (!isAtTop) {
-          maskValue = 'linear-gradient(180deg, transparent, white 20%, white)';
-        } else if (!isAtBottom) {
-          maskValue = 'linear-gradient(180deg, white, white 80%, transparent)';
-        } else {
-          maskValue = 'linear-gradient(180deg, white, white)';
-        }
-      } else {
-        maskValue = 'linear-gradient(180deg, white, white)';
-      }
+			if (isOverflowing) {
+				if (!isAtTop && !isAtBottom) {
+					maskValue =
+						"linear-gradient(180deg, transparent, white 20%, white 80%, transparent)";
+				} else if (!isAtTop) {
+					maskValue =
+						"linear-gradient(180deg, transparent, white 20%, white)";
+				} else if (!isAtBottom) {
+					maskValue =
+						"linear-gradient(180deg, white, white 80%, transparent)";
+				} else {
+					maskValue =
+						"linear-gradient(180deg, white, white)";
+				}
+			} else {
+				maskValue =
+					"linear-gradient(180deg, white, white)";
+			}
 
-      tbody.style.setProperty('-webkit-mask', maskValue);
-      tbody.style.setProperty('mask', maskValue);
-    };
+			tbody.style.setProperty(
+				"-webkit-mask",
+				maskValue
+			);
+			tbody.style.setProperty("mask", maskValue);
+		};
 
-    checkOverflow();
+		checkOverflow();
 
-    tbody.addEventListener('scroll', checkOverflow);
+		tbody.addEventListener(
+			"scroll",
+			checkOverflow
+		);
 
-    window.addEventListener('resize', checkOverflow);
+		window.addEventListener(
+			"resize",
+			checkOverflow
+		);
 
-    return () => {
-      tbody.removeEventListener('scroll', checkOverflow);
-      window.removeEventListener('resize', checkOverflow);
-    };
-  }, []);
+		return () => {
+			tbody.removeEventListener(
+				"scroll",
+				checkOverflow
+			);
+			window.removeEventListener(
+				"resize",
+				checkOverflow
+			);
+		};
+	}, []);
 
   return (
     <>
