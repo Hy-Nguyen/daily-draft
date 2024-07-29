@@ -26,16 +26,16 @@ export default function Drafts() {
   return (
     <>
       <main className="bg-lobby flex min-h-screen w-screen justify-center text-[#5A5C6F]">
-        <div id="container" className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] flex-col gap-4 md:flex-row">
+        <div id="container" className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] flex-col gap-4 2xl:flex-row">
           <DraftFilter
             states={[sports, leagues, duration, draftTypes, drafts]}
             setStates={[setSports, setLeagues, setDuration, setDraftTypes, setDrafts]}
           />
           <AnimatePresence>
-            <div id="my-drafts" className="h-full w-full rounded-[8px] bg-[#191A22] p-6 md:w-3/4">
+            <div id="my-drafts" className="h-full w-full rounded-[8px] bg-[#191A22] p-6 2xl:w-3/4">
               <div id="header" className="flex w-full flex-col justify-between gap-2 md:flex-row">
                 <h1 className="min-w-fit text-[18px] text-white">My Drafts</h1>
-                <div id="filters" className="flex w-full space-x-3 overflow-x-scroll">
+                <div id="filters" className="flex w-full space-x-3 overflow-x-scroll md:overflow-x-visible">
                   {filters.map((filter) => (
                     <GameFilters
                       key={filter}
@@ -57,7 +57,7 @@ export default function Drafts() {
                   variants={variants}
                   transition={{ duration: 0.6 }}
                 >
-                  <motion.div id="header" className="grid grid-cols-12 border-b border-white/10 pb-4">
+                  <motion.div id="header" className="hidden grid-cols-12 border-b border-white/10 pb-4 lg:grid">
                     <h1 className="col-span-4">Drafts</h1>
                     <h1 className="col-span-1">Entry Fee</h1>
                     <h1 className="col-span-1">Prize</h1>
@@ -86,7 +86,7 @@ export default function Drafts() {
                   variants={variants}
                   transition={{ duration: 0.6 }}
                 >
-                  <motion.div id="header" className="grid grid-cols-12 border-b border-white/10 pb-4">
+                  <motion.div id="header" className="hidden grid-cols-12 border-b border-white/10 pb-4 lg:grid">
                     <h1 className="col-span-4">Drafts</h1>
                     <h1 className="col-span-1">Entry Fee</h1>
                     <h1 className="col-span-1">Prize</h1>

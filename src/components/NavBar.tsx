@@ -146,8 +146,18 @@ export default function NavBar() {
       <div className="flex h-[50px] w-full max-w-[100vw] items-center justify-center bg-[#52BE70]">
         <Carousel className="w-3/4 md:w-1/2">
           <CarouselContent className="[&>*]:text-center [&>*]:text-[14px] [&>*]:font-semibold [&>*]:text-white">
-            <CarouselItem>FOLLOW US ON TWITTER FOR $50</CarouselItem>
-            <CarouselItem>FOLLOW US ON TWITTER FOR $100</CarouselItem>
+            <CarouselItem
+              className="hover:cursor-pointer"
+              onClick={() => window.open('https://x.com/intent/follow?screen_name=dailydraftcom', '_blank')}
+            >
+              FOLLOW US ON TWITTER FOR $50
+            </CarouselItem>
+            <CarouselItem
+              className="hover:cursor-pointer"
+              onClick={() => window.open('https://x.com/intent/follow?screen_name=dailydraftcom', '_blank')}
+            >
+              FOLLOW US ON TWITTER FOR $100
+            </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />

@@ -1,4 +1,4 @@
-export default function Jersey({ width }: { width?: string }) {
+export default function Jersey({ width, className }: { width?: string; className?: string }) {
   return (
     <svg
       width={width || '45'}
@@ -7,6 +7,7 @@ export default function Jersey({ width }: { width?: string }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      className={className}
     >
       <mask
         id="mask0_1_380"

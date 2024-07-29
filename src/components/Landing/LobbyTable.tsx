@@ -1,91 +1,57 @@
-import {
-	useEffect,
-	useRef,
-	useState,
-} from "react";
-import GameFilters from "./GameFilters";
-import Switch from "../ui/switch";
-import SearchIcon from "../../Icons/SearchIcon";
-import LobbyGameDisplay from "./LobbyGameDisplay";
-import DropdownFilter from "../ui/DropdownFilter";
+import { useEffect, useRef, useState } from 'react';
+import GameFilters from './GameFilters';
+import Switch from '../ui/switch';
+import SearchIcon from '../../Icons/SearchIcon';
+import LobbyGameDisplay from './LobbyGameDisplay';
+import DropdownFilter from '../ui/DropdownFilter';
 
 export default function LobbyTable() {
-	const [gameFilter, setGameFilter] =
-		useState("Running");
-	const [searchValue, setSearchValue] =
-		useState("");
-	const [sortFilter, setSortFilter] =
-		useState("All");
+  const [gameFilter, setGameFilter] = useState('Running');
+  const [searchValue, setSearchValue] = useState('');
+  const [sortFilter, setSortFilter] = useState('All');
 
-	const tbodyRef =
-		useRef<HTMLTableSectionElement | null>(null);
+  const tbodyRef = useRef<HTMLTableSectionElement | null>(null);
 
-	useEffect(() => {
-		const tbody = tbodyRef.current;
-		if (!tbody) return;
+  useEffect(() => {
+    const tbody = tbodyRef.current;
+    if (!tbody) return;
 
-		const checkOverflow = () => {
-			const isOverflowing =
-				tbody.scrollHeight > tbody.clientHeight;
-			const isAtTop = tbody.scrollTop === 0;
-			const isAtBottom =
-				Math.abs(
-					tbody.scrollHeight -
-						tbody.scrollTop -
-						tbody.clientHeight
-				) < 1;
+    const checkOverflow = () => {
+      const isOverflowing = tbody.scrollHeight > tbody.clientHeight;
+      const isAtTop = tbody.scrollTop === 0;
+      const isAtBottom = Math.abs(tbody.scrollHeight - tbody.scrollTop - tbody.clientHeight) < 1;
 
-			let maskValue = "";
+      let maskValue = '';
 
-			if (isOverflowing) {
-				if (!isAtTop && !isAtBottom) {
-					maskValue =
-						"linear-gradient(180deg, transparent, white 20%, white 80%, transparent)";
-				} else if (!isAtTop) {
-					maskValue =
-						"linear-gradient(180deg, transparent, white 20%, white)";
-				} else if (!isAtBottom) {
-					maskValue =
-						"linear-gradient(180deg, white, white 80%, transparent)";
-				} else {
-					maskValue =
-						"linear-gradient(180deg, white, white)";
-				}
-			} else {
-				maskValue =
-					"linear-gradient(180deg, white, white)";
-			}
+      if (isOverflowing) {
+        if (!isAtTop && !isAtBottom) {
+          maskValue = 'linear-gradient(180deg, transparent, white 20%, white 80%, transparent)';
+        } else if (!isAtTop) {
+          maskValue = 'linear-gradient(180deg, transparent, white 20%, white)';
+        } else if (!isAtBottom) {
+          maskValue = 'linear-gradient(180deg, white, white 80%, transparent)';
+        } else {
+          maskValue = 'linear-gradient(180deg, white, white)';
+        }
+      } else {
+        maskValue = 'linear-gradient(180deg, white, white)';
+      }
 
-			tbody.style.setProperty(
-				"-webkit-mask",
-				maskValue
-			);
-			tbody.style.setProperty("mask", maskValue);
-		};
+      tbody.style.setProperty('-webkit-mask', maskValue);
+      tbody.style.setProperty('mask', maskValue);
+    };
 
-		checkOverflow();
+    checkOverflow();
 
-		tbody.addEventListener(
-			"scroll",
-			checkOverflow
-		);
+    tbody.addEventListener('scroll', checkOverflow);
 
-		window.addEventListener(
-			"resize",
-			checkOverflow
-		);
+    window.addEventListener('resize', checkOverflow);
 
-		return () => {
-			tbody.removeEventListener(
-				"scroll",
-				checkOverflow
-			);
-			window.removeEventListener(
-				"resize",
-				checkOverflow
-			);
-		};
-	}, []);
+    return () => {
+      tbody.removeEventListener('scroll', checkOverflow);
+      window.removeEventListener('resize', checkOverflow);
+    };
+  }, []);
 
   return (
     <>
@@ -96,7 +62,7 @@ export default function LobbyTable() {
             <p className="h-[20px] w-[20px] rounded-full bg-[#5A5C71] text-center text-black">?</p>
           </div>
           <div id="filters" className="flex flex-col items-center gap-2 md:flex-row">
-            <div className="flex w-full gap-2 overflow-x-scroll md:w-fit">
+            <div className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black flex w-full gap-2 overflow-x-scroll md:w-fit md:overflow-x-visible">
               <GameFilters text="Running" active={gameFilter === 'Running'} setActive={setGameFilter} />
               <GameFilters text="Ended" active={gameFilter === 'Ended'} setActive={setGameFilter} />
               <GameFilters text="Paid Games" active={gameFilter === 'Paid Games'} setActive={setGameFilter} />
@@ -111,7 +77,7 @@ export default function LobbyTable() {
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search for a team, player or bet."
-              className="h-[40px] w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F] text-white focus:outline-none"
+              className="h-[40px] w-full rounded-r-[6px] bg-inherit text-xs text-[#5A5C6F] focus:outline-none"
             />
           </div>
         </div>
@@ -126,7 +92,7 @@ export default function LobbyTable() {
           />
         </div>
       </div>
-      <table className="mt-3 w-full">
+      <table className="mt-6 w-full xl:mt-3">
         <thead className="border-y">
           <tr className="my-5 hidden text-[16px] text-[#A7ADB9] *:text-start *:font-normal md:flex">
             <th className="w-6/12">Tournament</th>
@@ -134,7 +100,7 @@ export default function LobbyTable() {
             <th className="w-1/12">Duration</th>
             <th className="w-2/12">Prize Pool</th>
           </tr>
-          <tr className="my-5 flex text-[16px] text-[#A7ADB9] *:w-full *:text-center *:text-xl *:font-semibold md:hidden">
+          <tr className="my-5 flex text-[16px] text-white *:w-full *:text-center *:text-xl *:font-semibold md:hidden">
             <th>Drafts</th>
           </tr>
         </thead>

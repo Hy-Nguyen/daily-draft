@@ -84,16 +84,16 @@ export default function EditDraftPage() {
 
   return (
     <main className="bg-lobby flex min-h-screen w-screen justify-center pb-10 text-white">
-      <div className="mt-[5vh] flex h-full w-10/12 max-w-[2000px] flex-col items-center justify-center space-x-4">
+      <div className="mt-[5vh] flex h-full w-full max-w-[2000px] flex-col items-center justify-center px-4 xl:w-10/12 xl:px-0">
         <EditDraftHero title="UEFA EURO 2024" date="May 16, 2024" team="15" prizePool="1.5" buyIn=".5" />
-        <hr className="my-10 w-full border-white/10" />
-        <div className="flex h-[1200px] w-full justify-between">
-          <div className="border-draft bg-draft flex w-[30%] flex-col rounded-[8px] px-4 py-6">
+        <hr className="mx-0 my-6 w-full border-white/10 px-0 xl:my-10" />
+        <div className="flex h-fit w-full flex-col-reverse justify-between gap-6 xl:min-h-[1200px] xl:flex-row">
+          <div className="border-draft bg-draft flex w-full flex-col rounded-[8px] p-4 xl:w-1/3">
             <SearchSection search={searchInput} setSearch={setSearchInput} />
             <PlayerFilters {...sharedProps} />
             <PlayerList {...playerListProps} />
           </div>
-          <div className="border-draft bg-draft flex w-[68%] flex-col rounded-[8px] px-4 py-6">
+          <div className="border-draft bg-draft flex w-full flex-col rounded-[8px] p-4 xl:w-2/3">
             <DraftField
               selectedPlayers={selectedPlayers}
               onRemovePlayer={handleRemovePlayer}

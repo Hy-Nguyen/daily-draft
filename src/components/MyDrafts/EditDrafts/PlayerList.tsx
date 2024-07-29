@@ -67,14 +67,14 @@ export default function PlayerList({
   const totalPages = Math.ceil(sortedPlayers.length / playersPerPage);
 
   return (
-    <div className="relative mt-4 flex h-full w-full flex-col">
-      <div id="labels" className="grid grid-cols-7 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]">
-        <h1 className="col-span-4">Player({sortedPlayers.length})</h1>
-        <h1 className="col-span-1">Form</h1>
-        <h1 className="col-span-1">Total</h1>
-        <h1 className="col-span-1">Price</h1>
+    <div className="relative mt-4 flex h-full w-full flex-col gap-4 pb-16 xl:pb-0">
+      <div id="labels" className="grid grid-cols-9 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]">
+        <h1 className="col-span-6">Player({sortedPlayers.length})</h1>
+        <h1 className="col-span-1 hidden md:flex">Form</h1>
+        <h1 className="col-span-1 hidden md:flex">Total</h1>
+        <h1 className="col-span-1 hidden md:flex">Price</h1>
       </div>
-      <div id="player-list" className="mt-4 w-full">
+      <div id="player-list" className="w-full">
         {currentPlayers.map((player) => (
           <PlayerDisplay
             key={player.id}

@@ -41,10 +41,10 @@ export default function DropdownFilter({
       ref={dropdownRef}
       className={`${className} bg-draft border-draft relative flex h-[${height || 50}px] ${width} items-center justify-start`}
     >
-      <div className="flex w-full items-center justify-between gap-2 p-4" onClick={() => setIsOpen(!isOpen)}>
-        <h1 className="text-draft text-base">{label || ''}</h1>
+      <div className="flex w-full items-center justify-between gap-2 px-2 py-4" onClick={() => setIsOpen(!isOpen)}>
+        <h1 className="text-draft text-sm lg:text-base">{label || ''}</h1>
 
-        <div className="flex items-center space-x-3 text-base">
+        <div className="flex items-center gap-2 text-sm lg:text-base">
           <h1>{selected ? selected : 'All'}</h1>
           <DropdownArrow isOpen={isOpen} />
         </div>
@@ -52,7 +52,7 @@ export default function DropdownFilter({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="dropdown-content bg-draft border-draft absolute left-0 top-[60px] h-fit w-full space-y-2 overflow-hidden"
+            className="dropdown-content bg-draft border-draft absolute left-0 top-[60px] z-20 h-fit w-full space-y-2 overflow-hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{
               opacity: 1,

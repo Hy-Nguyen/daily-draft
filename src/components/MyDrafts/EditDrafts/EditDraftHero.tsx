@@ -17,8 +17,11 @@ export default function EditDraftHero({
   buyIn: string;
 }) {
   return (
-    <header id="hero" className="bg-hero flex h-[400px] w-full flex-col justify-start rounded-3xl p-8 text-white">
-      <div className="space-y-6">
+    <header
+      id="hero"
+      className="bg-hero flex h-fit min-h-[400px] w-full flex-col justify-start rounded-3xl p-8 text-white"
+    >
+      <div className="flex flex-col gap-6">
         <div id="cup-title" className="flex items-center space-x-3">
           <img src="/Lobby/EURO.png" alt="" className="aspect-square w-[56px]" />
           <h1 className="text-5xl font-semibold uppercase">{title}</h1>
@@ -28,22 +31,22 @@ export default function EditDraftHero({
           {date}
         </div>
 
-        <div id="teams" className="flex items-center space-x-3">
-          <TeamIcon fill="52BE70" />
-          <h1 className="text-base">{team} Teams</h1>
+        <div className="flex flex-col gap-3 lg:gap-6">
+          <div id="teams" className="flex items-center space-x-3">
+            <TeamIcon fill="52BE70" />
+            <h1 className="text-base">{team} Teams</h1>
+          </div>
+          <div id="prize-pool" className="flex items-center space-x-3">
+            <SOLIcon />
+            <h1 className="text-base">{prizePool} SOL Prize Pool</h1>
+          </div>
+          <div id="buy-in" className="flex items-center space-x-3">
+            <SOLIcon />
+            <h1 className="text-base">{buyIn} SOL Buy-In</h1>
+          </div>
         </div>
 
-        <div id="prize-pool" className="flex items-center space-x-3">
-          <SOLIcon />
-          <h1 className="text-base">{prizePool} SOL Prize Pool</h1>
-        </div>
-
-        <div id="buy-in" className="flex items-center space-x-3">
-          <SOLIcon />
-          <h1 className="text-base">{buyIn} SOL Buy-In</h1>
-        </div>
-
-        <div id="info" className="flex items-center space-x-6 text-[#5A5C6F]">
+        <div id="info" className="flex flex-col gap-3 text-[#5A5C6F] lg:flex-row lg:items-center lg:gap-6">
           <Tooltip
             classNames={{
               base: 'w-full flex justify-center',

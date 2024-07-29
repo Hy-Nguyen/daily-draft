@@ -30,8 +30,8 @@ export default function AddPlayer({ player, onRemove }: AddPlayerProps) {
   return (
     <div className="relative flex flex-col items-center">
       <Jersey width="70" />
-      <div className="-mt-[15px] flex w-full flex-col items-center justify-center bg-gradient-to-b from-black to-slate-900 p-1">
-        <h3 className="text-xs font-bold">{player.name}</h3>
+      <div className="-mt-[15px] flex w-full min-w-fit flex-col items-center justify-center bg-gradient-to-b from-black to-slate-900 p-1">
+        <h3 className="w-full min-w-fit text-center text-xs font-semibold">{player.name}</h3>
       </div>
       {onRemove && (
         <motion.button

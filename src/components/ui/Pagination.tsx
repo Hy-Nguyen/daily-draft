@@ -8,9 +8,10 @@ interface PaginationProps {
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;
+  className?: string;
 }
 
-export default function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
+export default function Pagination({ currentPage, totalPages, onPageChange, className }: PaginationProps) {
   const getPageNumbers = () => {
     if (totalPages <= 3) {
       return Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -34,7 +35,9 @@ export default function Pagination({ currentPage, totalPages, onPageChange }: Pa
   };
 
   return (
-    <div className="absolute bottom-4 flex w-full items-center justify-center space-x-3">
+    <div
+      className={`absolute bottom-4 left-1/2 flex w-fit -translate-x-1/2 items-center justify-center gap-2 md:w-full ${className}`}
+    >
       <motion.button
         onClick={() => handlePageChange(1)}
         disabled={currentPage === 1}

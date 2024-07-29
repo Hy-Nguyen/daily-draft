@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import Search from '../../../Icons/SearchIcon';
 import Refresh from '../../../Icons/Refresh';
-import { useState } from 'react';
 
 export default function SearchSection({
   search,
@@ -10,9 +9,8 @@ export default function SearchSection({
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
 }) {
-  const [hovered, setHovered] = useState(false);
   return (
-    <div id="search-section" className="flex w-full items-center space-x-3">
+    <div id="search-section" className="flex w-full items-center gap-4">
       <div id="search-bar" className="border-draft bg-draft my-3 flex w-3/5 items-center justify-center rounded-[6px]">
         <Search />
         <input
@@ -25,7 +23,7 @@ export default function SearchSection({
       </div>
       <motion.div
         id="reset-search"
-        className="border-draft flex w-2/5 flex-row space-x-2 hover:cursor-pointer"
+        className="border-draft group flex w-2/5 flex-row space-x-2 hover:cursor-pointer"
         onClick={() => setSearch('')}
         initial={{
           color: '#5A5C6F',
@@ -34,12 +32,14 @@ export default function SearchSection({
           color: '#fff',
           borderColor: '#fff',
         }}
-        onHoverStart={() => setHovered(true)}
-        onHoverEnd={() => setHovered(false)}
+        transition={{
+          duration: 0.5,
+          ease: 'easeInOut',
+        }}
       >
         <div className="flex h-[40px] w-full items-center justify-center space-x-3 text-inherit">
           <h1 className="text-xs text-inherit">Reset</h1>
-          <Refresh hover={hovered} />
+          <Refresh className="fill-[#5A5C6F] transition-all duration-500 ease-in-out group-hover:rotate-[270deg] group-hover:fill-white" />
         </div>
       </motion.div>
     </div>

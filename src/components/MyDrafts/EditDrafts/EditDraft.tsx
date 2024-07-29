@@ -8,10 +8,10 @@ const MotionLink = motion(RouterLink);
 export default function EditDraft() {
   return (
     <>
-      <div className="col-span-2 h-[60%]">
+      <div className="col-span-2 h-fit w-full">
         <MotionLink
           to="/drafts/test"
-          className="relative flex h-full w-full items-center justify-center rounded-[6px] bg-[#52BE70] px-3"
+          className="relative flex h-fit w-full items-center justify-center rounded-[6px] bg-[#52BE70] px-3 py-1"
           whileHover={{
             scale: 1.1,
             boxShadow: '0px 0px 18px 0px #52BE70',

@@ -46,14 +46,17 @@ export default function Leaderboard() {
           <AnimatePresence>
             <div
               id="my-drafts"
-              className="relative h-full min-h-[840px] w-full rounded-[8px] bg-[#191A22] p-6 pb-[80px]"
+              className="relative h-full min-h-[840px] w-full rounded-[8px] bg-[#191A22] p-3 pb-[80px] md:p-6"
             >
               <div id="header" className="flex w-full justify-between">
                 <h1 className="text-2xl font-semibold text-white">Leaderboard</h1>
               </div>
               <motion.table className="mt-6 w-full pb-[70px]">
-                <motion.tr id="header" className="grid w-full grid-cols-12 border-b border-white/10 pb-4 *:text-start">
-                  <th className="col-span-1">Rank</th>
+                <motion.tr
+                  id="header"
+                  className="grid w-full grid-cols-12 border-b border-white/10 pb-4 text-sm *:text-start md:text-base"
+                >
+                  <th className="col-span-1">#</th>
                   <th className="col-span-7">Name</th>
                   <th className="col-span-2">Played</th>
                   <th className="col-span-2">Won</th>

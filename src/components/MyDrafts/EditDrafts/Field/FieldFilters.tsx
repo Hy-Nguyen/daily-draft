@@ -15,43 +15,47 @@ interface FieldFiltersProps {
 
 export default function FieldFilters({ name, setName, position, setPosition, onResetPlayers }: FieldFiltersProps) {
   return (
-    <div id="buttons" className="flex w-full justify-between space-x-3">
-      <div id="left" className="w-1/2 space-y-3 p-4">
-        <div id="top" className="flex h-[40px] w-full space-x-3">
-          <div className="flex w-1/2 items-center justify-center rounded-[8px] border border-[#52BE70] bg-[#52BE70]/10 py-4">
+    <div id="buttons" className="flex w-full flex-col justify-between gap-4 xl:flex-row">
+      <div id="left" className="flex w-full flex-col gap-4 xl:w-1/2">
+        <div id="top" className="flex h-[40px] w-full gap-4">
+          <div className="flex w-1/2 items-center justify-center gap-2 rounded-[8px] border border-[#52BE70] bg-[#52BE70]/10 py-4">
             <Lightning />
             <h1>Autocomplete</h1>
           </div>
           <div className="flex w-1/2 justify-between">
             <motion.button
-              className="border-draft flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
+              className="border-draft group flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
               initial={{
                 color: '#5A5C6F',
               }}
               whileHover={{
                 color: '#fff',
                 borderColor: '#fff',
+              }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeInOut',
               }}
               onClick={onResetPlayers}
             >
-              <Refresh />
+              <Refresh className="fill-[#5A5C6F] transition-all duration-500 ease-in-out group-hover:rotate-[270deg] group-hover:fill-white" />
             </motion.button>
             <motion.div
               id="reset-search"
-              className="border-draft flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
+              className="border-draft group flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
               initial={{
                 color: '#5A5C6F',
               }}
               whileHover={{
                 color: '#fff',
-                borderColor: '#fff',
+                borderColor: '#FF1E31',
               }}
             >
-              <Reset />
+              <Reset className="fill-[#5A5C6F] transition-all duration-500 ease-in-out group-hover:fill-[#FF1E31]" />
             </motion.div>
             <motion.div
               id="reset-search"
-              className="border-draft flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
+              className="border-draft group flex h-full w-[30%] flex-row items-center justify-center space-x-2 hover:cursor-pointer"
               initial={{
                 color: '#5A5C6F',
               }}
@@ -60,11 +64,11 @@ export default function FieldFilters({ name, setName, position, setPosition, onR
                 borderColor: '#fff',
               }}
             >
-              <DotDotDot />
+              <DotDotDot className="fill-[#5A5C6F] transition-all duration-500 ease-in-out group-hover:fill-white" />
             </motion.div>
           </div>
         </div>
-        <div id="bottom" className="flex h-[40px] w-full space-x-3">
+        <div id="bottom" className="flex h-[40px] w-full gap-4">
           <div className="flex w-1/2 items-center justify-center rounded-[8px] bg-[#52BE70] py-4 uppercase">
             <h1>90m/90m</h1>
           </div>
@@ -73,8 +77,8 @@ export default function FieldFilters({ name, setName, position, setPosition, onR
           </div>
         </div>
       </div>
-      <div id="right" className="w-1/2 space-y-3 p-4">
-        <div id="top" className="flex h-[40px] w-full space-x-3">
+      <div id="right" className="flex w-full flex-col gap-4 xl:w-1/2">
+        <div id="top" className="flex h-[40px] w-full gap-4">
           <motion.div
             className="flex w-full items-center justify-center rounded-[8px] bg-[#52BE70] py-4 font-bold"
             whileHover={{
@@ -85,7 +89,7 @@ export default function FieldFilters({ name, setName, position, setPosition, onR
             <h1>Participate (FREE)</h1>
           </motion.div>
         </div>
-        <div id="bottom" className="flex h-[40px] w-full space-x-3">
+        <div id="bottom" className="flex h-[40px] w-full gap-4">
           <div className="w-1/2">
             <DropdownFilter
               options={['one', 'two', 'three']}

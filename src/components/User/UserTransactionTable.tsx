@@ -61,20 +61,23 @@ export default function UserTransactionTable({ transactions }: { transactions: a
   );
 
   return (
-    <div className="relative flex w-full flex-col gap-6 p-2 pb-20 md:w-4/5">
+    <div className="relative flex w-full flex-col gap-6 p-2 pb-20 xl:w-4/5">
       <TableFilters
         transactionFilters={transactionFilters}
         handleFilterChange={handleFilterChange}
         resetFilters={resetFilters}
       />
-      <table className="flex w-full flex-col overflow-x-scroll bg-[#191A22] text-white">
+      <table className="flex w-full flex-col overflow-x-scroll bg-[#191A22] text-white xl:overflow-x-visible">
         <thead className="flex w-full border-b border-[#2F3037] py-2">
-          <tr className="grid w-full grid-cols-9 *:text-start *:text-base *:font-normal *:text-[#5A5C6F]">
+          <tr className="hidden w-full grid-cols-9 *:text-start *:text-base *:font-normal *:text-[#5A5C6F] xl:grid">
             <th className="col-span-1">ID</th>
             <th className="col-span-1">Date</th>
             <th className="col-span-2">Amount</th>
             <th className="col-span-2">Type</th>
             <th className="col-span-3">Status</th>
+          </tr>
+          <tr className="*:text-large flex w-full items-center justify-center border-t border-white/10 pt-2 *:text-center *:font-semibold *:text-white xl:hidden">
+            <th>Transactions</th>
           </tr>
         </thead>
         <tbody className="flex w-full min-w-fit flex-col">

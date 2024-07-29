@@ -25,7 +25,7 @@ export default function PlayerFilterTab({
   }
   return (
     <motion.button
-      className={`flex h-[30px] w-11/12 items-center justify-center rounded-[6px] border bg-[#1B1D28] ${active ? 'game-filter-glow border-[#52BE70]' : 'border-white/5'}`}
+      className={`h-git group flex w-11/12 items-center justify-center rounded-[6px] border bg-[#1B1D28] py-2 ${active ? 'game-filter-glow border-[#52BE70]' : 'border-white/5'}`}
       onClick={handleChange}
       whileHover={{ borderColor: '#52BE70' }}
       animate={{
@@ -34,11 +34,7 @@ export default function PlayerFilterTab({
       transition={{ duration: 0.5 }}
     >
       <motion.p
-        className={`text-center text-[10px] font-semibold ${active ? 'text-[#52BE70]' : 'text-[#5A5C6F]'}`}
-        animate={{
-          color: active ? '#52BE70' : '#5A5C6F',
-        }}
-        transition={{ duration: 0.5 }}
+        className={`text-center text-[12px] font-semibold transition-all duration-500 ease-in-out ${active ? 'text-[#52BE70]' : 'text-[#5A5C6F] group-hover:text-[#52BE70]'}`}
       >
         {label} {currentFilled && maxFilled ? `${currentFilled}/${maxFilled}` : ''}
       </motion.p>

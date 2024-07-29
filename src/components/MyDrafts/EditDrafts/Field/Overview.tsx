@@ -38,7 +38,7 @@ export default function Overview() {
     setIsOpen(!isOpen);
   };
   return (
-    <div id="overview" className="w-10/12">
+    <div id="overview" className="w-full">
       <div className="border-draft h-full">
         <button onClick={toggleDropdown} className="flex w-full items-center justify-between p-4">
           <h1 className="text-sm">Saturday, 6 April 2024 ({matches.length} matches) </h1>
@@ -55,7 +55,7 @@ export default function Overview() {
                     backgroundColor: '#0000000F',
                   }}
                 >
-                  <div className="grid w-2/5 grid-cols-3 [&>h1]:cursor-default [&>h1]:font-semibold">
+                  <div className="grid w-full grid-cols-3 xl:w-2/5 [&>h1]:cursor-default [&>h1]:font-semibold">
                     <h1 className="text-start text-[#A7ADB9]">{match.home}</h1>
                     <h1 className="text-center text-[#52BE70]">{match.time}</h1>
                     <h1 className="text-end text-[#A7ADB9]">{match.away}</h1>

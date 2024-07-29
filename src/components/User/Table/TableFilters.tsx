@@ -19,17 +19,23 @@ interface TableFiltersProps {
 export default function TableFilters({ transactionFilters, handleFilterChange, resetFilters }: TableFiltersProps) {
   return (
     <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
-      <h1 className="text-2xl font-semibold">Transactions</h1>
+      <h1 className="pb-4 text-2xl font-semibold">Transactions</h1>
       <div className="flex w-full flex-col items-start gap-2 md:w-5/6 md:flex-row md:items-center">
         <motion.button
-          className="flex aspect-square size-[45px] items-center justify-center rounded-[6px] border border-white/10 bg-[#1B1D28]"
+          className="group flex aspect-square size-[45px] items-center justify-center rounded-[6px] border border-white/10 bg-[#1B1D28]"
           whileHover={{
+            borderColor: '#fff',
             scale: 1.05,
-            boxShadow: '0 0 15px rgba(256, 256, 256, 0.5)',
+            boxShadow: '0 0 15px rgba(256, 256, 256, 0.75)',
+            cursor: 'pointer',
+          }}
+          transition={{
+            duration: 0.5,
+            ease: 'easeInOut',
           }}
           onClick={resetFilters}
         >
-          <Refresh />
+          <Refresh className="fill-[#5A5C6F] transition-all duration-500 ease-in-out group-hover:rotate-[270deg] group-hover:fill-white" />
         </motion.button>
         <DropdownFilter
           selected={transactionFilters.status}

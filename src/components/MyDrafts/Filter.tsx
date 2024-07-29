@@ -15,13 +15,22 @@ export default function DraftFilter({ states, setStates }: { states: any[]; setS
           <motion.button
             id="reset-filters"
             type="reset"
-            className="flex aspect-square w-[40px] items-center justify-center rounded-[6px] border border-white/10 bg-[#1B1D28]"
+            className="group flex aspect-square w-[40px] items-center justify-center rounded-[6px] border border-white/10 bg-[#1B1D28]"
+            initial={{
+              color: '#5A5C6F',
+            }}
             whileHover={{
-              scale: 1.05,
-              boxShadow: '0 0 15px rgba(256, 256, 256, 0.5)',
+              color: '#fff',
+              borderColor: '#fff',
+              boxShadow: '0 0 15px rgba(256, 256, 256, 0.75)',
+              cursor: 'pointer',
+            }}
+            transition={{
+              duration: 0.5,
+              ease: 'easeInOut',
             }}
           >
-            <Refresh />
+            <Refresh className="fill-[#5A5C6F] transition-all duration-500 ease-in-out group-hover:rotate-[270deg] group-hover:fill-white" />
           </motion.button>
         </div>
         <div className="mb-6 mt-4">

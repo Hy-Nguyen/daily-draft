@@ -26,7 +26,7 @@ export default function PlayerFilters({
   playerCounts,
 }: PlayerFiltersProps) {
   return (
-    <div className="mt-10 flex w-full flex-col">
+    <div className="flex w-full flex-col">
       <div id="filter-dropdowns" className="flex w-full space-x-6">
         <div className="w-1/2">
           <DropdownFilter
