@@ -67,7 +67,7 @@ export default function PlayerList({
   const totalPages = Math.ceil(sortedPlayers.length / playersPerPage);
 
   return (
-    <div className="relative mt-4 flex h-full w-full flex-col gap-4 pb-16 xl:pb-0">
+    <div className="relative mt-4 flex h-full w-full flex-col gap-4 pb-16">
       <div id="labels" className="grid grid-cols-9 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]">
         <h1 className="col-span-6">Player({sortedPlayers.length})</h1>
         <h1 className="col-span-1 hidden md:flex">Form</h1>

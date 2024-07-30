@@ -17,39 +17,15 @@ export default function OverviewBody() {
       }}
       className="w-full space-y-3"
     >
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">Starts At</h1>
-        <h1 className="text-base font-medium text-white">4 April 2024 00:00</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">End At</h1>
-        <h1 className="text-base font-medium text-white">4 April 2024 02:45</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">Entrants</h1>
-        <h1 className="text-base font-medium text-white">15 Teams</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">Guaranteed Prizepool</h1>
-        <h1 className="text-base font-medium text-white">0.1 SOL</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">Prizepool</h1>
-        <h1 className="text-base font-medium text-white">0.1 SOL</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">ID</h1>
-        <h1 className="text-base font-medium text-white">873030</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">Game Week</h1>
-        <h1 className="text-base font-medium text-white">31</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
-        <h1 className="text-base font-normal text-[#5A5C6F]">Rake</h1>
-        <h1 className="text-base font-medium text-white">0.005 SOL</h1>
-      </div>
-      <div className="grid w-full grid-cols-2">
+      <TextContainer label="Starts At" text="4 April 2024 00:00" />
+      <TextContainer label="End At" text="4 April 2024 02:45" />
+      <TextContainer label="Entrants" text="15 Teams" />
+      <TextContainer label="Guaranteed Prizepool" text="0.1 SOL" />
+      <TextContainer label="Prizepool" text="0.1 SOL" />
+      <TextContainer label="ID" text="873030" />
+      <TextContainer label="Game Week" text="31" />
+      <TextContainer label="Rake" text="0.005 SOL" />
+      <div className="grid w-full grid-cols-2 items-center justify-center">
         <h1 className="text-base font-normal text-[#5A5C6F]">Details</h1>
         <div className="flex w-full flex-row gap-2">
           <GreenBadge time="50M" />
@@ -57,5 +33,14 @@ export default function OverviewBody() {
         </div>
       </div>
     </motion.div>
+  );
+}
+
+function TextContainer({ label, text }: { label: string; text: string }) {
+  return (
+    <div className="grid w-full grid-cols-2 items-center justify-center">
+      <h1 className="text-base font-normal text-[#5A5C6F]">{label}</h1>
+      <h1 className="text-base font-medium text-white">{text}</h1>
+    </div>
   );
 }

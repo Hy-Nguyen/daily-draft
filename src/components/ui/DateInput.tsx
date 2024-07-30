@@ -15,7 +15,7 @@ const DateInput: React.FC<DateInputProps> = ({ label, placeholder, value, onChan
     <div
       className={`${width} border-draft relative flex h-[50px] flex-row items-center gap-2 overflow-hidden rounded-[8px] bg-[#1A1B23] px-2`}
     >
-      <label htmlFor={placeholder} className="text-draft">
+      <label htmlFor={placeholder} className="text-draft text-sm lg:text-base">
         {label}:{' '}
       </label>
       <div className="relative flex-grow">

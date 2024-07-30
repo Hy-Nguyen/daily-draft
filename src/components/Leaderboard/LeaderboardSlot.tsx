@@ -23,12 +23,14 @@ export default function LeaderboardSlot({ rank, avatar, name, played, won, isCur
       <td className="col-span-1 text-center text-[#52BE70]">{rank}</td>
       <td className="col-span-7" content="">
         <img src={avatar} alt={name} className="mr-4 h-14 w-14 rounded-full" />
-        <h1>
-          {name} {isCurrentUser && <span className="ml-2 text-yellow-300">(You)</span>}
-        </h1>
+        <h1>{name}</h1>
       </td>
-      <td className="col-span-2">{played}</td>
-      <td className="col-span-2">{won}</td>
+      <td className="col-span-2">
+        <p className="w-full text-center">{played}</p>
+      </td>
+      <td className="col-span-2">
+        <p className="w-full text-center">{won}</p>
+      </td>
     </motion.tr>
   );
 }

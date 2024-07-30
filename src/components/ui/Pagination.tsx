@@ -36,7 +36,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange, clas
 
   return (
     <div
-      className={`absolute bottom-4 left-1/2 flex w-fit -translate-x-1/2 items-center justify-center gap-2 md:w-full ${className}`}
+      className={`absolute bottom-4 left-1/2 flex w-fit max-w-full -translate-x-1/2 items-center justify-center gap-2 px-2 md:w-full ${className}`}
     >
       <motion.button
         onClick={() => handlePageChange(1)}

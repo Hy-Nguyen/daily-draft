@@ -44,7 +44,7 @@ export default function DropdownFilter({
       <div className="flex w-full items-center justify-between gap-2 px-2 py-4" onClick={() => setIsOpen(!isOpen)}>
         <h1 className="text-draft text-sm lg:text-base">{label || ''}</h1>
 
-        <div className="flex items-center gap-2 text-sm lg:text-base">
+        <div className="flex items-center gap-2 text-sm text-white lg:text-base">
           <h1>{selected ? selected : 'All'}</h1>
           <DropdownArrow isOpen={isOpen} />
         </div>
@@ -73,7 +73,7 @@ export default function DropdownFilter({
                   backgroundColor: '#FFFFFF1E',
                 }}
               >
-                <h1 className="w-full text-center text-lg">{option}</h1>
+                <h1 className="w-full text-center text-lg text-white">{option}</h1>
               </motion.div>
             ))}
           </motion.div>

@@ -73,7 +73,7 @@ export default function PlayerDisplay({ onAddPlayer, isSelected, ...player }: Pl
             <h1 className="font-bold">{player.name}</h1>
             <div className="flex items-center gap-2 space-x-1 text-sm">
               <h1 className="w-fit rounded-[4px] border border-[#52BE70] px-2 text-[#52BE70]">May</h1>
-              <h1 className="truncatte whitespace-nowrap text-xs">
+              <h1 className="text-xs">
                 AstonVilla - <span className="text-[#A7ADB9]">Brentford</span>
               </h1>
             </div>
