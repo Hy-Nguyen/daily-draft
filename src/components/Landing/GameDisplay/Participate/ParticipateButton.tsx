@@ -25,11 +25,11 @@ export default function Participate() {
     }
   }, []);
   return (
-    <div id="button" className="my-2 w-full md:col-span-1 md:my-0">
+    <div id="button" className="my-2 w-full xl:col-span-1 xl:my-0">
       <motion.button
         className="relative flex h-[35px] w-full items-center rounded-[6px] bg-[#52BE70]"
         whileHover={{
-          scale: 1.1,
+          scale: 1.05,
           boxShadow: '0px 0px 18px 0px #52BE70',
         }}
         onClick={onOpen}
@@ -53,7 +53,7 @@ export default function Participate() {
         <ModalContent>
           {(onClose) => (
             <div className="flex w-full flex-col items-center px-4 xl:px-6">
-              <ModalHeader className="flex w-full grid-cols-5 flex-col items-center justify-center gap-2 text-white md:grid">
+              <ModalHeader className="flex w-full grid-cols-5 flex-col items-center justify-center gap-2 text-white xl:grid">
                 <div className="col-span-4 grid w-full grid-cols-4">
                   <div className="flex items-center justify-start xl:justify-center">
                     <img src="/Lobby/MADRID.png" alt="madrid" className="w-1/2" />
@@ -64,7 +64,7 @@ export default function Participate() {
                   </div>
                 </div>
                 <motion.button
-                  className="relative col-span-1 my-2 flex h-fit w-full items-center rounded-[6px] bg-[#52BE70] px-3 py-1 md:w-fit"
+                  className="relative col-span-1 my-2 flex h-fit w-full items-center rounded-[6px] bg-[#52BE70] px-3 py-1 xl:w-fit"
                   whileHover={{
                     scale: 1.1,
                     boxShadow: '0px 0px 18px 0px #52BE70',

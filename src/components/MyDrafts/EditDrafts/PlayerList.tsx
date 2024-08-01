@@ -70,9 +70,9 @@ export default function PlayerList({
     <div className="relative mt-4 flex h-full w-full flex-col gap-4 pb-16">
       <div id="labels" className="grid grid-cols-9 [&>h1]:text-sm [&>h1]:text-[#5A5C6F]">
         <h1 className="col-span-6">Player({sortedPlayers.length})</h1>
-        <h1 className="col-span-1 hidden md:flex">Form</h1>
-        <h1 className="col-span-1 hidden md:flex">Total</h1>
-        <h1 className="col-span-1 hidden md:flex">Price</h1>
+        <h1 className="col-span-1 hidden xl:flex">Form</h1>
+        <h1 className="col-span-1 hidden xl:flex">Total</h1>
+        <h1 className="col-span-1 hidden xl:flex">Price</h1>
       </div>
       <div id="player-list" className="w-full">
         {currentPlayers.map((player) => (

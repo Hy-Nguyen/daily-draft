@@ -45,11 +45,11 @@ export default function Drafts() {
           />
           <AnimatePresence>
             <div id="my-drafts" className="h-full w-full rounded-[8px] bg-[#191A22] p-6 xl:w-3/4">
-              <div id="header" className="flex w-full flex-col justify-between gap-2 md:flex-row">
+              <div id="header" className="flex w-full flex-col justify-between gap-2 xl:flex-row">
                 <h1 className="min-w-fit text-[18px] text-white">My Drafts</h1>
                 <div
                   id="filters"
-                  className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black flex w-full space-x-3 overflow-x-scroll md:overflow-x-visible"
+                  className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black flex w-full space-x-3 overflow-x-scroll xl:overflow-x-visible"
                 >
                   {filters.map((filter) => (
                     <GameFilters

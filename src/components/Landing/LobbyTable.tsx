@@ -55,14 +55,14 @@ export default function LobbyTable() {
 
   return (
     <>
-      <div id="header" className="flex flex-col md:flex-row">
+      <div id="header" className="flex flex-col xl:flex-row">
         <div id="left" className="w-full justify-evenly">
           <div className="my-2 flex items-center space-x-2">
             <h1>Available Games</h1>
             <p className="h-[20px] w-[20px] rounded-full bg-[#5A5C71] text-center text-black">?</p>
           </div>
-          <div id="filters" className="flex flex-col items-center gap-2 md:flex-row">
-            <div className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black flex w-full gap-2 overflow-x-scroll md:w-fit md:overflow-x-visible">
+          <div id="filters" className="flex flex-col items-center gap-2 xl:flex-row">
+            <div className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black flex w-full gap-2 overflow-x-scroll xl:w-fit xl:overflow-x-visible">
               <GameFilters text="Running" active={gameFilter === 'Running'} setActive={setGameFilter} />
               <GameFilters text="Ended" active={gameFilter === 'Ended'} setActive={setGameFilter} />
               <GameFilters text="Paid Games" active={gameFilter === 'Paid Games'} setActive={setGameFilter} />
@@ -70,7 +70,7 @@ export default function LobbyTable() {
             </div>
             <Switch />
           </div>
-          <div className="my-3 flex w-full items-center justify-center rounded-[6px] border border-white/5 bg-[#1B1C25] md:max-w-[340px]">
+          <div className="my-3 flex w-full items-center justify-center rounded-[6px] border border-white/5 bg-[#1B1C25] xl:max-w-[340px]">
             <SearchIcon />
             <input
               type="text"
@@ -81,26 +81,26 @@ export default function LobbyTable() {
             />
           </div>
         </div>
-        <div id="right" className="flex flex-col justify-start space-y-3 md:w-1/2 md:items-end">
-          <h1 className="text-base text-[#5A5C6F]/75 md:w-3/5 md:text-xs">Sort By</h1>
+        <div id="right" className="flex flex-col justify-start space-y-3 xl:w-1/2 xl:items-end">
+          <h1 className="text-base text-[#5A5C6F]/75 xl:w-3/5 xl:text-xs">Sort By</h1>
           <DropdownFilter
             label="Prize Pool:"
             selected={sortFilter}
             setSelected={setSortFilter}
             options={['High to Low', 'Low to High']}
-            width="w-full md:w-3/5"
+            width="w-full xl:w-3/5"
           />
         </div>
       </div>
       <table className="mt-6 w-full xl:mt-3">
         <thead className="border-y">
-          <tr className="my-5 hidden text-[16px] text-[#A7ADB9] *:text-start *:font-normal md:flex">
+          <tr className="my-5 hidden text-[16px] text-[#A7ADB9] *:text-start *:font-normal xl:flex">
             <th className="w-6/12">Tournament</th>
             <th className="w-2/12">Starts In</th>
             <th className="w-1/12">Duration</th>
             <th className="w-2/12">Prize Pool</th>
           </tr>
-          <tr className="my-5 flex text-[16px] text-white *:w-full *:text-center *:text-xl *:font-semibold md:hidden">
+          <tr className="my-5 flex text-[16px] text-white *:w-full *:text-center *:text-xl *:font-semibold xl:hidden">
             <th>Drafts</th>
           </tr>
         </thead>
@@ -108,7 +108,7 @@ export default function LobbyTable() {
         <tbody
           id="lobby-table"
           ref={tbodyRef}
-          className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black mt-6 flex max-h-[500px] flex-col space-y-[20px] overflow-y-scroll md:pr-4"
+          className="scrollbar scrollbar-thumb-[#52BE70] scrollbar-track-black flex max-h-[500px] flex-col gap-[20px] overflow-y-scroll pt-4 xl:pr-4"
         >
           <LobbyGameDisplay
             matchName="Uefa Euro 2024"

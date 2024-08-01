@@ -17,7 +17,7 @@ export default function ModalMatchDetails(props: ModalMatchDetailsProps) {
   return (
     <div
       id="match-details"
-      className="flex w-full grid-cols-3 items-center justify-center border-b border-[#515954] bg-[#1A1B23] px-2 py-4 last:border-b-0 md:grid"
+      className="flex w-full grid-cols-3 items-center justify-center border-b border-[#515954] bg-[#1A1B23] px-2 py-4 last:border-b-0 xl:grid"
     >
       <div
         id="team1"

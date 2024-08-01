@@ -36,7 +36,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange, clas
 
   return (
     <div
-      className={`absolute bottom-4 left-1/2 flex w-fit max-w-full -translate-x-1/2 items-center justify-center gap-2 px-2 md:w-full ${className}`}
+      className={`xl::w-full absolute bottom-4 left-1/2 flex w-fit max-w-full -translate-x-1/2 items-center justify-center gap-2 px-2 ${className}`}
     >
       <motion.button
         onClick={() => handlePageChange(1)}
@@ -73,7 +73,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange, clas
           onClick={() => handlePageChange(pageNumber)}
           className={`flex aspect-square w-[40px] items-center justify-center rounded-[4px] ${
             pageNumber === currentPage
-              ? 'border border-[#52BE70] bg-[#52BE70]/30 text-[#52BE70]'
+              ? 'border-draft border-[#52BE70] bg-[#52BE70]/30 text-[#52BE70]'
               : 'border-draft text-draft bg-[#1B1D28]'
           }`}
           whileHover={{

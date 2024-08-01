@@ -13,12 +13,12 @@ export default function Tournament({
   return (
     <div
       id="Tournament"
-      className="col-span-6 flex h-full w-full flex-col items-center justify-between gap-4 md:flex-row md:gap-0"
+      className="col-span-6 flex h-full w-full flex-col items-center justify-between gap-4 xl:flex-row xl:gap-0"
     >
-      <div className="flex w-full items-center justify-between gap-2 md:w-2/3 md:justify-center">
+      <div className="flex w-full items-center justify-between gap-2 xl:w-2/3 xl:justify-center">
         <div
           id="images"
-          className="relative flex h-full w-[64px] items-center justify-normal md:ml-4 md:justify-center"
+          className="relative flex h-full w-[64px] items-center justify-normal xl:ml-4 xl:justify-center"
         >
           <TournamentImage />
           <TournamentImageRight />
@@ -28,7 +28,7 @@ export default function Tournament({
           <h1 className="m-0 text-lg uppercase">{tournamentName}</h1>
         </div>
       </div>
-      <div id="badges" className="flex w-full gap-2 md:w-2/6 md:justify-end">
+      <div id="badges" className="flex w-full gap-2 xl:w-2/6 xl:justify-end">
         <GreenBadge time={durationTime} />
         <YellowBadge />
       </div>

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Switch() {
-	const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(false);
 
-	const toggleSwitch = () => {
-		setIsOn(!isOn);
-	};
+  const toggleSwitch = () => {
+    setIsOn(!isOn);
+  };
 
   return (
-    <div className="flex w-full items-center gap-2 md:w-fit md:justify-center">
+    <div className="flex w-full items-center gap-2 xl:w-fit xl:justify-center">
       <div
         className="flex w-full items-center border border-white/5"
         style={{

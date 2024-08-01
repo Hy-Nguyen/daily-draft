@@ -25,28 +25,28 @@ export default function Field({ selectedPlayers, onRemovePlayer }: FieldProps) {
 
       <div
         id="goalkeeper"
-        className="absolute left-1/2 top-[-12%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 md:top-[10%] md:scale-100"
+        className="absolute left-1/2 top-[-12%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 xl:top-[10%] xl:scale-100"
       >
         {renderPlayers('GK', 1)}
         <PositionLabel position="Goal Keeper" />
       </div>
       <div
         id="defender"
-        className="absolute left-1/2 top-[20%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 md:top-[30%] md:scale-100"
+        className="absolute left-1/2 top-[20%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 xl:top-[30%] xl:scale-100"
       >
         <div className="flex flex-row space-x-5">{renderPlayers('DF', 5)}</div>
         <PositionLabel position="defender" />
       </div>
       <div
         id="midfielder"
-        className="absolute left-1/2 top-[52%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 md:top-[50%] md:scale-100"
+        className="absolute left-1/2 top-[52%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 xl:top-[50%] xl:scale-100"
       >
         <div className="flex flex-row space-x-5">{renderPlayers('MF', 5)}</div>
         <PositionLabel position="midfielder" />
       </div>
       <div
         id="forward"
-        className="absolute left-1/2 top-[82%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 md:top-[70%] md:scale-100"
+        className="absolute left-1/2 top-[82%] flex h-[50px] w-[50px] -translate-x-1/2 scale-[.65] transform flex-col items-center justify-start space-y-3 xl:top-[70%] xl:scale-100"
       >
         <div className="flex flex-row space-x-5">{renderPlayers('FW', 3)}</div>
         <PositionLabel position="forward" />

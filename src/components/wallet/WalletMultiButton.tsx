@@ -67,13 +67,13 @@ export const WalletMultiButton: FC<ButtonProps> = ({ children, ...props }) => {
   if (!wallet)
     return (
       <WalletModalButton {...props}>
-        <h1 className="text-sm font-semibold md:text-lg">Connect Wallet</h1>
+        <h1 className="text-sm font-semibold xl:text-lg">Connect Wallet</h1>
       </WalletModalButton>
     );
   if (!base58)
     return (
       <WalletConnectButton {...props}>
-        <h1 className="text-sm font-semibold md:text-lg">Connect Wallet</h1>
+        <h1 className="text-sm font-semibold xl:text-lg">Connect Wallet</h1>
       </WalletConnectButton>
     );
 

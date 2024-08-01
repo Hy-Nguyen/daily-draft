@@ -13,7 +13,7 @@ export function GreenBadge({ time }: { time: string }) {
 export function YellowBadge({ text = 'Guaranteed' }: { text?: string }) {
   return (
     <div
-      className="flex h-[35px] w-fit items-center justify-center rounded-[6px] bg-[#FFC42E54] px-4 md:ml-3"
+      className="flex h-[35px] w-fit items-center justify-center rounded-[6px] bg-[#FFC42E54] px-4 xl:ml-3"
       style={{
         boxShadow: '0px 0px 12px 0px #FFC42E38',
       }}

@@ -11,7 +11,7 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`${isOpen ? 'bg-white' : ''} flex h-[80px] w-full max-w-[100vw] justify-center bg-[#121318] text-white`}
+        className={`${isOpen ? 'bg-white' : ''} z-[101] flex h-[80px] w-full max-w-[100vw] justify-center bg-[#121318] text-white`}
       >
         {/* Desktop Nav */}
         <div className="mx-auto w-full px-6 sm:px-16">
@@ -64,7 +64,7 @@ export default function NavBar() {
               </div>
             </div>
             <div className="flex items-center lg:hidden">
-              <button className="mobile-menu-button z-[60] outline-none" onClick={() => setIsOpen(!isOpen)}>
+              <button className="mobile-menu-button z-[102] outline-none" onClick={() => setIsOpen(!isOpen)}>
                 <svg
                   className="size-10 text-white transition-all"
                   fill="none"
@@ -84,7 +84,7 @@ export default function NavBar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="fixed inset-0 z-50 flex min-h-[100dvh] max-w-[100vw] origin-top flex-col items-start justify-between overflow-scroll bg-[#121318] pb-[120px] pt-4 text-white lg:hidden"
+              className="fixed inset-0 z-[101] flex min-h-[100dvh] max-w-[100vw] origin-top flex-col items-start justify-between overflow-scroll bg-[#121318] pb-[120px] pt-4 text-white lg:hidden"
               initial={{ y: '-100vh' }}
               animate={{
                 opacity: 1,
@@ -144,7 +144,7 @@ export default function NavBar() {
         </AnimatePresence>
       </nav>
       <div className="flex h-[50px] w-full max-w-[100vw] items-center justify-center bg-[#52BE70]">
-        <Carousel className="w-3/4 md:w-1/2">
+        <Carousel className="w-3/4 xl:w-1/2">
           <CarouselContent className="[&>*]:text-center [&>*]:text-[14px] [&>*]:font-semibold [&>*]:text-white">
             <CarouselItem
               className="hover:cursor-pointer"

@@ -42,11 +42,11 @@ export default function Leaderboard() {
   return (
     <>
       <main className="bg-lobby flex min-h-screen w-screen justify-center pb-10 text-[#5A5C6F]">
-        <div id="container" className="mt-[3vh] flex h-full w-full max-w-[2000px] space-x-4 px-4 xl:px-6">
+        <div id="container" className="mt-[5vh] flex h-full w-full max-w-[2000px] space-x-4 px-4 xl:px-6">
           <AnimatePresence>
             <div
               id="my-drafts"
-              className="relative h-full min-h-[840px] w-full rounded-[8px] bg-[#191A22] p-3 pb-[80px] md:p-6"
+              className="relative h-full min-h-[840px] w-full rounded-[8px] bg-[#191A22] p-3 pb-[80px] xl:p-6"
             >
               <div id="header" className="flex w-full justify-between">
                 <h1 className="text-2xl font-semibold text-white">Leaderboard</h1>
@@ -54,10 +54,10 @@ export default function Leaderboard() {
               <motion.table className="mt-6 w-full pb-[70px]">
                 <motion.tr
                   id="header"
-                  className="grid w-full grid-cols-12 border-b border-white/10 pb-4 text-sm *:font-medium md:text-base"
+                  className="grid w-full grid-cols-12 border-b border-white/10 pb-4 text-sm *:font-medium xl:text-base"
                 >
                   <th className="col-span-1">
-                    <p className="w-full text-start">#</p>
+                    <p className="w-full px-2 text-start">#</p>
                   </th>
                   <th className="col-span-7">
                     <p className="w-full text-start">Name</p>
