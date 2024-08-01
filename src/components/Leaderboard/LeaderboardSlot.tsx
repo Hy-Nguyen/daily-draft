@@ -22,7 +22,7 @@ export default function LeaderboardSlot({ rank, avatar, name, played, won, isCur
     >
       <td className="col-span-1 px-2 text-center text-[#52BE70]">{rank}</td>
       <td className="col-span-7" content="">
-        <img src={avatar} alt={name} className="mr-4 h-14 w-14 rounded-full" />
+        <img src={avatar} alt={name} className="mr-4 size-10 rounded-full xl:size-14" />
         <h1>{name}</h1>
       </td>
       <td className="col-span-2">
