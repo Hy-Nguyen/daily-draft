@@ -83,7 +83,7 @@ function HomePage() {
   return (
     <>
       <main className="bg-lobby flex min-h-screen max-w-[100vw] justify-center overflow-hidden bg-black text-white">
-        <div id="container" className="mb-16 mt-[5vh] h-full w-10/12 max-w-[2000px]">
+        <div id="container" className="mb-16 mt-[5vh] h-full w-full max-w-[2000px] px-4 xl:px-6">
           <Hero />
           <hr className="my-10 opacity-10" />
           <LobbyTable />

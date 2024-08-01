@@ -11,7 +11,7 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`${isOpen ? 'bg-white' : ''} z-[101] flex h-[80px] w-full max-w-[100vw] justify-center bg-[#121318] text-white`}
+        className={`${isOpen ? 'bg-white' : ''} relative z-[101] flex h-[80px] w-full max-w-[100vw] justify-center bg-[#121318] text-white`}
       >
         {/* Desktop Nav */}
         <div className="mx-auto w-full px-6 sm:px-16">
@@ -64,19 +64,21 @@ export default function NavBar() {
               </div>
             </div>
             <div className="flex items-center lg:hidden">
-              <button className="mobile-menu-button z-[102] outline-none" onClick={() => setIsOpen(!isOpen)}>
-                <svg
-                  className="size-10 text-white transition-all"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  {isOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
-                </svg>
-              </button>
+              {!isOpen && (
+                <button className="z-[102] outline-none" onClick={() => setIsOpen(!isOpen)}>
+                  <svg
+                    className="size-10 text-white transition-all"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    {isOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
+                  </svg>
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -95,6 +97,19 @@ export default function NavBar() {
               }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
+              <button className="absolute right-3 top-3 z-[102] outline-none" onClick={() => setIsOpen(!isOpen)}>
+                <svg
+                  className="size-10 text-white transition-all"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {isOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
+                </svg>
+              </button>
               <NavLink to="/" className="flex h-1/4 w-full items-end justify-center">
                 <img src="/Nav/NavLogoCombo.png" alt="Daily Draft Logo" className="h-[44px]" />
               </NavLink>
